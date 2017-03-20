@@ -30,6 +30,93 @@
         <div>
             <h1></h1>
         </div>
+        <div class="requestMethodsMain" id="requestMethods">
+            <h2>HTTP Request Methods</h2>
+            <h4>GET</h4><p>GET is a request method that represents a specified source. By having a GET method, request should only retrieve data.</p>
+	        <h4>HEAD</h4><p>HEAD is a request method that asks for a response identical of a GET request. It has no response body.</p>
+	        <h4>POST</h4><p>POST, on the other hand, is a method used to submit an entity to a specific source. It usually changes in state or side effects on the server.</p>
+	        <h4>PUT</h4><p>PUT is a method that replaces all current representations of the resource with the request payload.</p>
+	        <h4>DELETE</h4><p>DELETE, as the term implies, is a method that deletes all specified resource.</p>
+	        <h4>CONNECT</h4><p>CONNECT method is used as a tunnel to the server identified by the resource.</p>
+	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource.</p>
+	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource.</p>
+	        <h4>PATCH</h4><p>PATCH is a method used to apply partial modifications to a resource.</p>
+        </div>
+        <div class="statusMain" id="status">
+            <h2>HTTP Status Codes</h2>
+            <div class="info" id="1xx">
+                <h3>Informational 1xx</h3>
+                <ul>
+                    <li><p>100 - Continue</p></li>
+                    <li><p>101 - Switching Protocols</p></li>
+                </ul>
+            </div>
+            
+            <div class="succesful" id="2xx">
+                <h3>Successful 2xx</h3>
+                <ul>
+                    <li><p>200 - OK</p></li>
+                    <li><p>201 - Created</p></li>
+                    <li><p>202 - Accepted</p></li>
+                    <li><p>203 - Non-Authorative Information</p></li>
+                    <li><p>204 - No Content</p></li>
+                    <li><p>205 - Reset Content</p></li>
+                    <li><p>206 - Partial</p></li>
+                </ul>
+            </div>
+            
+            <div class="redirection" id="3xx">
+                <h3>Redirection 3xx</h3>
+                <ul>
+                    <li><p>300 - Multiple Choices</p></li>
+                    <li><p>301 - Moved Permanently</p></li>
+                    <li><p>302 - Found</p></li>
+                    <li><p>303 - See Other</p></<li><li><p>302 - Found</p></li>
+                    <li><p>304 - Not Modified</p></li>
+                    <li><p>305 - Use Proxy</p></li>
+                    <li><p>306 - Switch Proxy</p></li>
+                    <li><p>307 - Temporary Redirect</p></li>
+                    <li><p>308 - Permanently Redirect</p></li>
+                </ul>
+            </div>
+            
+            <div class="clientError" id="4xx">
+                <h3>Client Error 4xx</h3>
+                <ul>
+                    <li><p>400 - Bad Request</p></li>
+                    <li><p>401 - Unauthorized</p></li>
+                    <li><p>402 - Payment Required</p></li>
+                    <li><p>403 - Forbidden</p></</li>
+                    <li><p>404 - Not Found</p></li>
+                    <li><p>405 - Method Not Allowed</p></li>
+                    <li><p>406 - Not Acceptable</p></li>
+                    <li><p>407 - Proxy Authentication Required</p></li>
+                    <li><p>408 - Request Timeout</p></li>
+                    <li><p>409 - Conflict</p></li>
+                    <li><p>410 - Gone</p></li>
+                    <li><p>411 - Length</p></li>
+                    <li><p>412 - Precondition Failed</p></li>
+                    <li><p>413 - Request Entity Too Large</p></li>
+                    <li><p>414 - Request-URI Too Long</p></li>
+                    <li><p>415 - Unsupported Media Type</p></li>    
+                    <li><p>416 - Requested Range Not Satisfiable</p></li>
+                    <li><p>417 - Expectation Failed</p></li>
+                    <li><p>426 - Upgrade Required</p></li>
+                </ul>
+            </div>
+            
+            <div class="serverError" id="5xx">
+                <h3>Client Error 4xx</h3>
+                <ul>
+                    <li><p>500 - Internal Server Error</p></li>
+                    <li><p>501 - Not Implemented</p></li>
+                    <li><p>502 - Bad Gateway</p></li>
+                    <li><p>503 - Service Unavailable</p></</li>
+                    <li><p>504 - Gateway Timeout</p></li>
+                    <li><p>505 - HTTP Version Not Supported</p></li>
+                </ul>
+            </div>
+        </div>  
     </div>
 </body>
 
