@@ -41,7 +41,77 @@
 	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource.</p>
 	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource.</p>
 	        <h4>PATCH</h4><p>PATCH is a method used to apply partial modifications to a resource.</p>
-        </div>
+		
+	<div class="messageHeadersMain" id="messageHeaders">
+		<h2>HTTP Message Headers<h2>
+		
+		<h3 id="GeneralHF">A. General Header Fields</h3>
+		
+		<ul>
+		  <li>Cache-control – our request can be cache / not</li>
+		  <li>Connection – used to control persistent connection</li>
+		  <li>Date – date when the request / response was held</li>
+		  <li>Pragma – old headers (HTTP 1.0); no cache control and connection (generic directive)</li>
+		  <li>Trailer – trailers available</li>
+		  <li>Transfer-encoding – chunk encoding</li>
+		  <li>Upgrade – possible to switch protocols</li>
+		  <li>Via – includes in the proxy headers which is the intersection</li>
+		  <li>Warning – used to indicate that there is something wrong / issue with the body</li>
+		</ul>
+			
+		<h3 id="ReguestHF">B. Request Header Fields</h3>
+		
+		<ul>
+		  <li>Accept – used for negotiating; mime types</li>
+		  <li>Accept-charset - mime types</li>
+		  <li>Accept-encoding - mime types</li>
+		  <li>Accept-Language – different languages</li>
+		  <li>Authorization – doing some protected resource</li>
+		  <li>Expect – 100 (Continue) or 417 (Expectation Failed)</li>
+		  <li>From – e-mail address of client (person generating request)</li>
+		  <li>Host – required header (virtual host)</li>
+		  <li>If-Match – conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-Modified-Since - conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-None-Match - conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-Range - conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-Unmodified-Since - conditional request; serves the service if it satisfy the condition</li>
+		  <li>Max-forward </li>
+		  <li>Proxy-Authorization </li>
+		  <li>Range – retrieve pieces of contents</li>
+		  <li>Referrer – where the request originated from</li>
+		  <li>User-Agent </li>
+		</ul>
+		
+		<h3 id="ResponseHF">C. Response Header Fields</h3>
+		
+		<ul>
+		   <li>Accept-Range</li>
+		   <li>Age – age of the resource</li>
+		   <li>E-Tag – default configuration</li>
+		   <li>Location </li>
+		   <li>Proxy-Authenticate </li>
+		   <li>Retry-After – used conjunction with the error 503 (Service Unavailable)</li>
+		   <li>Server </li>
+		   <li>Vary </li>
+		   <li>WWW-Authenticate </li>
+		</ul>
+	
+		<h3 id="EntityHF">D. Entity Header Fields</h3>
+		
+		<ul>
+		   <li>Allow – says what we can do in resource</li>
+		   <li>Content-encoding – how entity is encoded</li>
+		   <li>Content-language – specification language</li>
+		   <li>Content-length – length of the request in bytes</li>
+		   <li>Content-location – given a file you asked for</li>
+		   <li>Content-MD5 – digest algorithm; computes the hash of the resource</li>
+		   <li>Content-range – portion of range (resource)</li>
+		   <li>Content-type </li>
+		   <li>Expires – resource can be hash at a certain period of resource</li>
+		   <li>Last Modified – time stop of resource; used (conditional request)</li>
+		</ul>
+	</div>
+			
         <div class="statusMain" id="status">
             <h2>HTTP Status Codes</h2>
             <div class="info" id="1xx">
@@ -111,7 +181,7 @@
                     <li><p>500 - Internal Server Error</p></li>
                     <li><p>501 - Not Implemented</p></li>
                     <li><p>502 - Bad Gateway</p></li>
-                    <li><p>503 - Service Unavailable</p></</li>
+                    <li><p>503 - Service Unavailable</p></li>
                     <li><p>504 - Gateway Timeout</p></li>
                     <li><p>505 - HTTP Version Not Supported</p></li>
                 </ul>
