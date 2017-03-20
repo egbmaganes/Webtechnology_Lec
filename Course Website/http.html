@@ -6,13 +6,10 @@
     <meta name="viewport" content=" width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <header>
         <h1>Web Systems and Technologies</h1>
-        <p>- A course website -</p>
 </header>
 <body>
     <div id="sidetab">
@@ -24,44 +21,116 @@
                     <li><a href="index.html#internet">Internet</a></li>
                     <li><a href="index.html#WWW">World Wide Web</a></li>
                     <li><a>HTTP</a></li>
-                    <li><a href="#feat">Features</a></li>
-                    <li><a href="#ResouceAdd">Resource Addressing</a></li>
+                    <li><a href="#content">Features</a></li>
+                    <li><a href="#ResourceAdd">Resource Addressing</a></li>
                     <li><a href="#RequestMsg">Request Message</a></li>
                     <li><a href="#RequestMethods">Request Methods</a></li>
                     <li><a href="#MsgHeaders">Message Headers</a></li>
                     <li><a href="#StatusCodes">Status Codes</a></li>
-                    <li><a href="references.html">References</a></li>
                 </ul>
             </nav>
         </div>
     
-    <div id="content">
-        <div>
-            <h1></h1>
+<div id="content">
+        <div class="features" id="feat">
+            <h2>HTTP and its Features</h2>
+            <p>HTTP is a protocol that is used to deliver data on the World Wide Web. The default port for HTTP is 80. HTTPS uses the port 443.</p>
+            <h3 class="h-premise">HTTP is connectionless.</h3>
+            <p>The HTTP client, i.e., a browser initiates an HTTP request and after a request is made, the client disconnects from the server and waits for a response. The server processes the request and re-establishes the connection with the client to send a response back.</p>
+            
+            <h3 class="h-premise">HTTP is media independent.</h3>
+            <p>It means, any type of data can be sent by HTTP as long as both the client and the server know how to handle the data content. It is required for the client as well as the server to specify the content type using appropriate MIME-type.</p>
+            
+            <h3 class="h-premise">HTTP is stateless.</h3>
+            <p>As mentioned above, HTTP is connectionless and it is a direct result of HTTP being a stateless protocol. The server and client are aware of each other only during a current request. Afterwards, both of them forget about each other. Due to this nature of the protocol, neither the client nor the browser can retain information between different requests across the web pages.</p>
+            
+            <h3 class="h-premise">HTTP provides support for other functionalities such as:</h3>
+            <ul>
+                <li>Cache Control</li>
+                <li>Content media type (MIME - Multipurpose Internet Mail Extensions) specification</li>
+                <li>Language and character specification</li>
+                <li>Content negotiation</li>
+                <li>Content negotiation</li>
+                <li>Client-server protocol</li>
+                <li>Persistent connections</li>
+                <li>Request pipelining</li>
+                <li id="ResourceAdd">Authentication/authorization</li>
+            </ul>
         </div>
-	    
-           <div class="requestMethodsMain" id="requestMethods">
-           <h3>A. Standard Methods</h3>
-            <h4>GET</h4><p>GET is a request method that represents a specified source. By having a GET method, request should only retrieve data. It is the most commonly used HTTP method.</p>
-	        <h4>HEAD</h4><p>HEAD is a request method that asks for a response identical of a GET request and used to retrieve metadata. It has no response body.</p>
-	        <h4>POST</h4><p>POST, on the other hand, is typically used to submit an entity to a specific source or used in submitting HTML form data. It usually changes in state or side effects on the server.</p>
-	        <h4>PUT</h4><p>PUT is a method that replaces all current representations of the resource with the request payload and stores the enclosed entity.</p>
-	        <h4>DELETE</h4><p>DELETE, as the term implies, is a method that deletes all specified resource associated with with the request URI.</p>
-	        <h4>CONNECT</h4><p>CONNECT method is used to request the establishment of a tunnel to the server identified by the resource.</p>
-	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource. The request may be *.</p>
-	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource. Typically used for testing or diagnostic of the request or response chain.</p>
+        <div class="resourceAddr" >
+            <h2>HTTP Resource Addressing</h2>
+            <p>HTTP resources are identified using URI's.</p>
+            <h3>What is URI?</h3>
+            <p>URI or Uniform Resource Identifier is a string of characters used to identify a resource. Such identification enables interaction with representations of the resource over a network, typically the World Wide Web, using specific protocols. <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
+            <h3>URI Parts and components</h3>
+            <h4>Generic URI form is: scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]</h4>
+            <hr>
+            <h4>Parts:</h4>
+            <h4>Scheme</h4>
+            <p>The scheme, consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:). <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
+            
+            <h4>Authority</h4>
+            <p>The authority part is comprising with
+            an optional authentication section of a user name and password, separated by a colon, followed by an @ symbol.
+            A "host", consisting of either a registered name (including but not limited to a hostname), or an IP address. IPv4 Also, addresses must be in dot-decimal notation, and IPv6 addresses must be enclosed in brackets and an optional "port number", separated from the hostname by a colon. <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
+            
+            <h4>Path</h4>
+            <p>A path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one.[9] The path must begin with a single slash (/) if an authority part was present, and may also if one was not, but must not begin with a double slash. The path is always defined, though the defined path may be empty (zero length). <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
+            <h4>Query</h4><p>A query is optional and it is separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. Its syntax is not well defined, but by convention is most often a sequence of attribute–value pairs separated by a delimiter. 
+            <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
+            <h4>Fragment</h4><p>A fragment is optional and is separated from the preceding part by a hash (#). The fragment contains a fragment identifier providing direction to a secondary resource, such as a section heading in an article identified by the remainder of the URI. When the primary resource is an HTML document, the fragment is often an id attribute of a specific element, and web browsers will scroll this element into view. <a id="RequestMsg" href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
+            
+            
+        </div>
+        
+        <div>
+            <h2>Request Message</h2>
+            <ul>
+                <li>Status line</li>
+                <li>Message Response headers</li>
+                <li>Empty line</li>
+                <li id="RequestMethods">Message body (payload)</li>
+            </ul>
+        </div>
+        <div class="requestMethodsMain">
+            <h2>HTTP Request Methods</h2>
+            <p>The request method involves the semantics of the request. It indicates the purpose of the client that has made this request to the server and retrieves a response from the server if the request made is successful.</p>
+
+           <div class="requestMethodsMain">
+           <h3 class="h-premise">A. Standard Methods</h3>
+            <h4>GET</h4>
+               <p>GET is a request method that represents a specified source. By having a GET method, request should only retrieve data. It is the most commonly used HTTP method.</p>
+	        <h4>HEAD</h4
+                ><p>HEAD is a request method that asks for a response identical of a GET request and used to retrieve metadata. It has no response body.</p>
+	        <h4>POST</h4>
+               <p>POST, on the other hand, is typically used to submit an entity to a specific source or used in submitting HTML form data. It usually changes in state or side effects on the server.</p>
+	        <h4>PUT</h4>
+               <p>PUT is a method that replaces all current representations of the resource with the request payload and stores the enclosed entity.</p>
+	        <h4>DELETE</h4>
+               <p>DELETE, as the term implies, is a method that deletes all specified resource associated with with the request URI.</p>
+	        <h4>CONNECT</h4>
+               <p>CONNECT method is used to request the establishment of a tunnel to the server identified by the resource.</p>
+	        <h4>OPTIONS</h4>
+               <p>OPTIONS is a method used to describe the communication for the resource. The request may be *.</p>
+	        <h4>TRACE</h4>
+               <p>TRACE method performs a message loop-back test along the path to the resource. Typically used for testing or diagnostic of the request or response chain.</p>
+
 	        <h4>PATCH</h4><p>PATCH is a method used to apply partial modifications to a resource.</p>
 
-			<h3 id="extensionMethods">B. Extension Methods</h3>
-		    <h4>1. Safe Methods</h4><p>Safe Methods are methods that doesn’t change on the resources on the client side (web). These methods are GET, HEAD, OPTIONS, TRACE.</p>
-			<h4>2. Idempotent Methods</h4><p>Idempotent methods are GET, HEAD, PUT and DELETE share this property. </p>
-		    <h4>3. Cacheable Methods</h4><p>Cacheable methods are responses that we get can be cache for easily retrieving.</p>
+			<h3 class="h-premise">B. Extension Methods</h3>
+		    <h4>1. Safe Methods</h4>
+               <p>Safe methods refers to methods that does not do anything significant actions to change or modify a file other than retrieve them. There are considered to be "read-only" methods.</p>
+			<h4>2. Idempotent Methods</h4>
+               <p>Idempotent methods are methods that always yield the same result no matter how many times it gets re-executed.</p>
+		    <h4 id="MsgHeaders">3. Cacheable Methods</h4>
+               <p>Cacheable methods are methods that get stored in the cache for easy retrieval.</p>
 		</div>
-		
-	<div class="messageHeadersMain" id="messageHeaders">
+    
+	<div class="messageHeadersMain">
         <h2>HTTP Message Headers</h2>
+		<p>HTTP header fields includes general header fields, request-header fields, response-header fields, and entity-header fields. Header fields indicates the status of the communication between the client and server.</p>
 		
-		<h3 id="GeneralHF">A. General Header Fields</h3>
+        <h3 class="h-premise">A. General Header Fields (<a href="https://tools.ietf.org/html/rfc2616#section-4.5">RFC 2616</a>)</h3>
 		
 		<ul>
 		  <li>Cache-control – our request can be cache / not</li>
@@ -72,137 +141,138 @@
 		  <li>Transfer-encoding – chunk encoding</li>
 		  <li>Upgrade – possible to switch protocols</li>
 		  <li>Via – includes in the proxy headers which is the intersection</li>
-		  <li>Warning – used to indicate that there is something wrong / issue with the body</li>
+		  <li>Warning – used to indicate that there is something wrong/ issue with the body</li>
 		</ul>
 			
-		<h3 id="ReguestHF">B. Request Header Fields</h3>
+		<h3 class="h-premise">B. Request Header Fields (<a href="https://tools.ietf.org/html/rfc2616#section-5.3">RFC 2616</a>)</h3>
 		
 		<ul>
-		  <li>Accept – used for negotiating; mime types</li>
-		  <li>Accept-charset - mime types</li>
-		  <li>Accept-encoding - mime types</li>
-		  <li>Accept-Language – different languages</li>
-		  <li>Authorization – doing some protected resource</li>
-		  <li>Expect – 100 (Continue) or 417 (Expectation Failed)</li>
-		  <li>From – e-mail address of client (person generating request)</li>
-		  <li>Host – required header (virtual host)</li>
-		  <li>If-Match – conditional request; serves the service if it satisfy the condition</li>
-		  <li>If-Modified-Since - conditional request; serves the service if it satisfy the condition</li>
-		  <li>If-None-Match - conditional request; serves the service if it satisfy the condition</li>
-		  <li>If-Range - conditional request; serves the service if it satisfy the condition</li>
-		  <li>If-Unmodified-Since - conditional request; serves the service if it satisfy the condition</li>
+		  <li>Accept</li>
+		  <li>Accept-charset</li>
+		  <li>Accept-encoding</li>
+		  <li>Accept-Language</li>
+		  <li>Authorization</li>
+		  <li>Expect</li>
+		  <li>From</li>
+		  <li>Host</li>
+		  <li>If-Match</li>
+		  <li>If-Modified-Since</li>
+		  <li>If-None-Match</li>
+		  <li>If-Range</li>
+		  <li>If-Unmodified-Since</li>
 		  <li>Max-forward </li>
 		  <li>Proxy-Authorization </li>
-		  <li>Range – retrieve pieces of contents</li>
-		  <li>Referrer – where the request originated from</li>
+		  <li>Range</li>
+		  <li>Referrer</li>
 		  <li>User-Agent </li>
 		</ul>
 		
-		<h3 id="ResponseHF">C. Response Header Fields</h3>
+		<h3 class="h-premise">C. Response Header Fields (<a href="https://tools.ietf.org/html/rfc2616#section-6.2">RFC 2616</a>)</h3>
 		
 		<ul>
 		   <li>Accept-Range</li>
-		   <li>Age – age of the resource</li>
-		   <li>E-Tag – default configuration</li>
+		   <li>Age</li>
+		   <li>E-Tag</li>
 		   <li>Location </li>
 		   <li>Proxy-Authenticate </li>
-		   <li>Retry-After – used conjunction with the error 503 (Service Unavailable)</li>
+		   <li>Retry-After</li>
 		   <li>Server </li>
 		   <li>Vary </li>
 		   <li>WWW-Authenticate </li>
 		</ul>
 	
-		<h3 id="EntityHF">D. Entity Header Fields</h3>
+		<h3 class="h-premise">D. Entity Header Fields (<a href="https://tools.ietf.org/html/rfc2616#section-7.1">RFC 2616</a>)</h3>
 		
 		<ul>
-		   <li>Allow – says what we can do in resource</li>
+		   <li>Allow – says what we can do in the resouce</li>
 		   <li>Content-encoding – how entity is encoded</li>
-		   <li>Content-language – specification language</li>
+		   <li>Content-language – specified language</li>
 		   <li>Content-length – length of the request in bytes</li>
-		   <li>Content-location – given a file you asked for</li>
+		   <li>Content-location – location of the file being asked</li>
 		   <li>Content-MD5 – digest algorithm; computes the hash of the resource</li>
-		   <li>Content-range – portion of range (resource)</li>
+		   <li>Content-range – portion of the resource</li>
 		   <li>Content-type </li>
-		   <li>Expires – resource can be hash at a certain period of resource</li>
-		   <li>Last Modified – time stop of resource; used (conditional request)</li>
+		   <li>Expires – resource can be cached at a certain period of resource</li>
+		   <li id="StatusCodes">Last Modified – date where the resource is last modified.</li>
 		</ul>
 	</div>
 			
-        <div class="statusMain" id="status">
+        <div class="statusMain">
             <h2>HTTP Status Codes</h2>
             <div class="info" id="1xx">
-                <h3>Informational 1xx</h3>
+                <h3 class="h-premise">Informational 1xx</h3>
                 <ul>
-                    <li><p>100 Continue – client is sending expect header</p></li>
-                    <li><p>101 Switching Protocols – upgrading protocols</p></li>
+                    <li>100 Continue</li>
+                    <li>101 Switching Protocols</li>
                 </ul>
             </div>
             
             <div class="succesful" id="2xx">
-                <h3>Successful 2xx</h3>
+                <h3 class="h-premise">Successful 2xx</h3>
                 <ul>
-                    <li><p>200 OK</p></li>
-                    <li><p>201 Created</p></li>
-                    <li><p>202 Accepted – already receive the request </p></li>
-                    <li><p>203 Non-Authorative Information</p></li>
-                    <li><p>204 No Content</p></li>
-                    <li><p>205 Reset Content – used to tell client to reset forms</p></li>
-                    <li><p>206 Partial Content – range request</p></li>
+                    <li>200 OK</li>
+                    <li>201 Created</li>
+                    <li>202 Accepted</li>
+                    <li>203 Non-Authorative Information</li>
+                    <li>204 No Content</li>
+                    <li>205 Reset Content</li>
+                    <li>206 Partial Content</li>
                 </ul>
             </div>
             
             <div class="redirection" id="3xx">
-                <h3>Redirection 3xx</h3>
+                <h3 class="h-premise">Redirection 3xx</h3>
                 <ul>
-                    <li><p>300 Multiple Choices – returned app if there are multiple resources</p></li>
-                    <li><p>301 Moved Permanently – change bookmark</p></li>
-                    <li><p>302 Found</p></li>
-                    <li><p>303 See Other</p></li>
-                    <li><p>304 Not Modified – conditional request</p></li>
-                    <li><p>305 Use Proxy – go through a proxy</p></li>
-                    <li><p>306 Switch Proxy</p></li>
-                    <li><p>307 Temporary Redirect – shouldn’t make a change</p></li>
-                    <li><p>308 Permanently Redirect</p></li>
+                    <li>300 Multiple Choices</li>
+                    <li>301 Moved Permanently</li>
+                    <li>302 Found</li>
+                    <li>303 See Other</li>
+                    <li>304 Not Modified</li>
+                    <li>305 Use Proxy</li>
+                    <li>306 Switch Proxy</li>
+                    <li>307 Temporary Redirect</li>
+                    <li>308 Permanently Redirect</li>
                 </ul>
             </div>
             
             <div class="clientError" id="4xx">
-                <h3>Client Error 4xx</h3>
+                <h3 class="h-premise">Client Error 4xx</h3>
                 <ul>
-                    <li><p>400 Bad Request – request malform missing something</p></li>
-                    <li><p>401 Unauthorized – accessing authorized page</p></li>
-                    <li><p>402 Payment Required – allowing payment (e-commerce)</p></li>
-                    <li><p>403 Forbidden – not allow to access resource</p></li>
-                    <li><p>404 Not Found</p></li>
-                    <li><p>405 Method Not Allowed – put (not configured)</p></li>
-                    <li><p>406 Not Acceptable – mime type / particular language</p></li>
-                    <li><p>407 Proxy Authentication Required – redirected to proxy, authenticate first</p></li>
-                    <li><p>408 Request Timeout – process of request time-out</p></li>
-                    <li><p>409 Conflict</p></li>
-                    <li><p>410 Gone – no longer available</p></li>
-                    <li><p>411 Length - not specify how long data</p></li>
-                    <li><p>412 Precondition Failed – put (already exist – non match)</p></li>
-                    <li><p>413 Request Entity Too Large – can accept only to a maximum size</p></li>
-                    <li><p>414 Request-URI Too Long – maximum size to URL (can’t handle by server)</p></li>
-                    <li><p>415 Unsupported Media Type – doesn’t know how to handle content</p></li>    
-                    <li><p>416 Requested Range Not Satisfiable</p></li>
-                    <li><p>417 Expectation Failed – issuing expect header</p></li>
-                    <li><p>426 Upgrade Required – upgrade first (http 2)</p></li>
+                    <li>400 Bad Request</li>
+                    <li>401 Unauthorized</li>
+                    <li>402 Payment Required</li>
+                    <li>403 Forbidden</li>
+                    <li>404 Not Found</li>
+                    <li>405 Method Not Allowed</li>
+                    <li>406 Not Acceptable</li>
+                    <li>407 Proxy Authentication Required</li>
+                    <li>408 Request Timeout</li>
+                    <li>409 Conflict</li>
+                    <li>410 Gone</li>
+                    <li>411 Length Required</li>
+                    <li>412 Precondition Failed</li>
+                    <li>413 Request Entity Too Large</li>
+                    <li>414 Request-URI Too Long</li>
+                    <li>415 Unsupported Media Type</li>    
+                    <li>416 Requested Range Not Satisfiable</li>
+                    <li>417 Expectation Failed</li>
+                    <li>426 Upgrade Required</li>
                 </ul>
             </div>
             
             <div class="serverError" id="5xx">
-                <h3>Client Error 4xx</h3>
+                <h3 class="h-premise">Server Error 5xx</h3>
                 <ul>
-                    <li><p>500 Internal Server Error - misconfiguration in server</p></li>
-                    <li><p>501 Not Implemented – server doesn’t know how to handle request</p></li>
-                    <li><p>502 Bad Gateway – there is a problem in gateway resource</p></li>
-                    <li><p>503 Service Unavailable – maintenance work</p></li>
-                    <li><p>504 Gateway Timeout - gateway (overloaded)</p></li>
-                    <li><p>505 HTTP Version Not Supported - specify versions</p></li>
+                    <li>500 Internal Server Error</li>
+                    <li>501 Not Implemented</li>
+                    <li>502 Bad Gateway</li>
+                    <li>503 Service Unavailable</li>
+                    <li>504 Gateway Timeout</li>
+                    <li>505 HTTP Version Not Supporteds</li>
                 </ul>
             </div>
         </div>  
+    </div>
     </div>
 </body>
 
