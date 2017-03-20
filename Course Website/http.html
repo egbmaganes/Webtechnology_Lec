@@ -30,8 +30,9 @@
         <div>
             <h1></h1>
         </div>
-        <div class="requestMethodsMain" id="requestMethods">
-            <h2>HTTP Request Methods</h2>
+	    
+           <div class="requestMethodsMain" id="requestMethods">
+           <h3>A. Standard Methods</h3>
             <h4>GET</h4><p>GET is a request method that represents a specified source. By having a GET method, request should only retrieve data.</p>
 	        <h4>HEAD</h4><p>HEAD is a request method that asks for a response identical of a GET request. It has no response body.</p>
 	        <h4>POST</h4><p>POST, on the other hand, is a method used to submit an entity to a specific source. It usually changes in state or side effects on the server.</p>
@@ -41,6 +42,12 @@
 	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource.</p>
 	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource.</p>
 	        <h4>PATCH</h4><p>PATCH is a method used to apply partial modifications to a resource.</p>
+
+			<h3 id="extensionMethods">B. Extension Methods</h3>
+		    <h4>1. Safe Methods</h4><p>Safe Methods are methods that doesn’t change on the resources on the client side (web). These methods are GET, HEAD, OPTIONS, TRACE.</p>
+			<h4>2. Idempotent Methods</h4><p>Idempotent methods are GET, HEAD, PUT and DELETE share this property. </p>
+		    <h4>3. Cacheable Methods</h4><p>Cacheable methods are responses that we get can be cache for easily retrieving.</p>
+		</div>
 		
 	<div class="messageHeadersMain" id="messageHeaders">
 		<h2>HTTP Message Headers<h2>
@@ -117,73 +124,73 @@
             <div class="info" id="1xx">
                 <h3>Informational 1xx</h3>
                 <ul>
-                    <li><p>100 - Continue</p></li>
-                    <li><p>101 - Switching Protocols</p></li>
+                    <li><p>100 Continue – client is sending expect header</p></li>
+                    <li><p>101 Switching Protocols – upgrading protocols</p></li>
                 </ul>
             </div>
             
             <div class="succesful" id="2xx">
                 <h3>Successful 2xx</h3>
                 <ul>
-                    <li><p>200 - OK</p></li>
-                    <li><p>201 - Created</p></li>
-                    <li><p>202 - Accepted</p></li>
-                    <li><p>203 - Non-Authorative Information</p></li>
-                    <li><p>204 - No Content</p></li>
-                    <li><p>205 - Reset Content</p></li>
-                    <li><p>206 - Partial</p></li>
+                    <li><p>200 OK</p></li>
+                    <li><p>201 Created</p></li>
+                    <li><p>202 Accepted – already receive the request </p></li>
+                    <li><p>203 Non-Authorative Information</p></li>
+                    <li><p>204 No Content</p></li>
+                    <li><p>205 Reset Content – used to tell client to reset forms</p></li>
+                    <li><p>206 Partial Content – range request</p></li>
                 </ul>
             </div>
             
             <div class="redirection" id="3xx">
                 <h3>Redirection 3xx</h3>
                 <ul>
-                    <li><p>300 - Multiple Choices</p></li>
-                    <li><p>301 - Moved Permanently</p></li>
-                    <li><p>302 - Found</p></li>
-                    <li><p>303 - See Other</p></<li><li><p>302 - Found</p></li>
-                    <li><p>304 - Not Modified</p></li>
-                    <li><p>305 - Use Proxy</p></li>
-                    <li><p>306 - Switch Proxy</p></li>
-                    <li><p>307 - Temporary Redirect</p></li>
-                    <li><p>308 - Permanently Redirect</p></li>
+                    <li><p>300 Multiple Choices – returned app if there are multiple resources</p></li>
+                    <li><p>301 Moved Permanently – change bookmark</p></li>
+                    <li><p>302 Found</p></li>
+                    <li><p>303 See Other</p></li>
+                    <li><p>304 Not Modified – conditional request</p></li>
+                    <li><p>305 Use Proxy – go through a proxy</p></li>
+                    <li><p>306 Switch Proxy</p></li>
+                    <li><p>307 Temporary Redirect – shouldn’t make a change</p></li>
+                    <li><p>308 Permanently Redirect</p></li>
                 </ul>
             </div>
             
             <div class="clientError" id="4xx">
                 <h3>Client Error 4xx</h3>
                 <ul>
-                    <li><p>400 - Bad Request</p></li>
-                    <li><p>401 - Unauthorized</p></li>
-                    <li><p>402 - Payment Required</p></li>
-                    <li><p>403 - Forbidden</p></</li>
-                    <li><p>404 - Not Found</p></li>
-                    <li><p>405 - Method Not Allowed</p></li>
-                    <li><p>406 - Not Acceptable</p></li>
-                    <li><p>407 - Proxy Authentication Required</p></li>
-                    <li><p>408 - Request Timeout</p></li>
-                    <li><p>409 - Conflict</p></li>
-                    <li><p>410 - Gone</p></li>
-                    <li><p>411 - Length</p></li>
-                    <li><p>412 - Precondition Failed</p></li>
-                    <li><p>413 - Request Entity Too Large</p></li>
-                    <li><p>414 - Request-URI Too Long</p></li>
-                    <li><p>415 - Unsupported Media Type</p></li>    
-                    <li><p>416 - Requested Range Not Satisfiable</p></li>
-                    <li><p>417 - Expectation Failed</p></li>
-                    <li><p>426 - Upgrade Required</p></li>
+                    <li><p>400 Bad Request – request malform missing something</p></li>
+                    <li><p>401 Unauthorized – accessing authorized page</p></li>
+                    <li><p>402 Payment Required – allowing payment (e-commerce)</p></li>
+                    <li><p>403 Forbidden – not allow to access resource</p></li>
+                    <li><p>404 Not Found</p></li>
+                    <li><p>405 Method Not Allowed – put (not configured)</p></li>
+                    <li><p>406 Not Acceptable – mime type / particular language</p></li>
+                    <li><p>407 Proxy Authentication Required – redirected to proxy, authenticate first</p></li>
+                    <li><p>408 Request Timeout – process of request time-out</p></li>
+                    <li><p>409 Conflict</p></li>
+                    <li><p>410 Gone – no longer available</p></li>
+                    <li><p>411 Length - not specify how long data</p></li>
+                    <li><p>412 Precondition Failed – put (already exist – non match)</p></li>
+                    <li><p>413 Request Entity Too Large – can accept only to a maximum size</p></li>
+                    <li><p>414 Request-URI Too Long – maximum size to URL (can’t handle by server)</p></li>
+                    <li><p>415 Unsupported Media Type – doesn’t know how to handle content</p></li>    
+                    <li><p>416 Requested Range Not Satisfiable</p></li>
+                    <li><p>417 Expectation Failed – issuing expect header</p></li>
+                    <li><p>426 Upgrade Required – upgrade first (http 2)</p></li>
                 </ul>
             </div>
             
             <div class="serverError" id="5xx">
                 <h3>Client Error 4xx</h3>
                 <ul>
-                    <li><p>500 - Internal Server Error</p></li>
-                    <li><p>501 - Not Implemented</p></li>
-                    <li><p>502 - Bad Gateway</p></li>
-                    <li><p>503 - Service Unavailable</p></li>
-                    <li><p>504 - Gateway Timeout</p></li>
-                    <li><p>505 - HTTP Version Not Supported</p></li>
+                    <li><p>500 Internal Server Error - misconfiguration in server</p></li>
+                    <li><p>501 Not Implemented – server doesn’t know how to handle request</p></li>
+                    <li><p>502 Bad Gateway – there is a problem in gateway resource</p></li>
+                    <li><p>503 Service Unavailable – maintenance work</p></li>
+                    <li><p>504 Gateway Timeout - gateway (overloaded)</p></li>
+                    <li><p>505 HTTP Version Not Supported - specify versions</p></li>
                 </ul>
             </div>
         </div>  
