@@ -1,0 +1,29 @@
+html{
+    margin: 0;
+}
+.jumbotron {
+    background-color:  !important;
+}
+
+#sidetab{
+    background-color: rgba(28, 88, 166, .7);
+    display: inline-block;
+    position: absolute;
+    float: left;
+    width: 15%;
+    height: 120%;
+    margin-top:-2.2%;
+}
+#content{
+    /*background-color: rgba(28, 88, 166, .8); */
+    position: static;
+    display: inline-block;
+    float: right;
+    margin-top:-2.2%;
+    width: 85%;
+    padding:5%;
+}
+
+#content p {
+    text-align: justify;
+}

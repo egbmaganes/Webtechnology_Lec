@@ -4,32 +4,43 @@
     <title>Web Technology - Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <header>
-    <div class="banner">
+    <div class="jumbotron text-center">
         <h1>Web Systems and Technologies</h1>
+        <p>- A course website -</p>
     </div>
 </header>
 <body>
-    <nav id="sidenav">
-        <ul>
-            <li><a href="index.html">Introduction</a></li>
-            <li><a href="index.html#internet">Internet</a></li>
-            <li><a href="index.html#WWW">World Wide Web</a></li>
-            <li><a>HTTP</a></li>
-            <li><a href="#feat">Features</a></li>
-            <li><a href="#ResouceAdd">Resource Addressing</a></li>
-            <li><a href="#RequestMsg">Request Message</a></li>
-            <li><a href="#RequestMethods">Request Methods</a></li>
-            <li><a href="#MsgHeaders">Message Headers</a></li>
-            <li><a href="#StatusCodes">Status Codes</a></li>
-        </ul>
-    </nav>
-    <div>
+    <div id="sidetab">
+            <h1>Topics</h1>
+            <h2>Chapter 1</h2>
+            <nav id="sidenav">
+                <ul>
+                    <li><a href="index.html">Introduction</a></li>
+                    <li><a href="index.html#internet">Internet</a></li>
+                    <li><a href="index.html#WWW">World Wide Web</a></li>
+                    <li><a>HTTP</a></li>
+                    <li><a href="#feat">Features</a></li>
+                    <li><a href="#ResouceAdd">Resource Addressing</a></li>
+                    <li><a href="#RequestMsg">Request Message</a></li>
+                    <li><a href="#RequestMethods">Request Methods</a></li>
+                    <li><a href="#MsgHeaders">Message Headers</a></li>
+                    <li><a href="#StatusCodes">Status Codes</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div id="content">
         <div>
             <h1></h1>
         </div>
+
         <div class="features" id="feat">
             <h2>HTTP Basic Features</h2>
             <h3>HTTP is connectionless.</h3>
@@ -80,34 +91,124 @@
 	        <h4>CONNECT</h4><p>CONNECT method is used as a tunnel to the server identified by the resource.</p>
 	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource.</p>
 	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource.</p>
+
+	    
+           <div class="requestMethodsMain" id="requestMethods">
+           <h3>A. Standard Methods</h3>
+            <h4>GET</h4><p>GET is a request method that represents a specified source. By having a GET method, request should only retrieve data. It is the most commonly used HTTP method.</p>
+	        <h4>HEAD</h4><p>HEAD is a request method that asks for a response identical of a GET request and used to retrieve metadata. It has no response body.</p>
+	        <h4>POST</h4><p>POST, on the other hand, is typically used to submit an entity to a specific source or used in submitting HTML form data. It usually changes in state or side effects on the server.</p>
+	        <h4>PUT</h4><p>PUT is a method that replaces all current representations of the resource with the request payload and stores the enclosed entity.</p>
+	        <h4>DELETE</h4><p>DELETE, as the term implies, is a method that deletes all specified resource associated with with the request URI.</p>
+	        <h4>CONNECT</h4><p>CONNECT method is used to request the establishment of a tunnel to the server identified by the resource.</p>
+	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource. The request may be *.</p>
+	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource. Typically used for testing or diagnostic of the request or response chain.</p>
+
 	        <h4>PATCH</h4><p>PATCH is a method used to apply partial modifications to a resource.</p>
-        </div>
+
+			<h3 id="extensionMethods">B. Extension Methods</h3>
+		    <h4>1. Safe Methods</h4><p>Safe Methods are methods that doesn’t change on the resources on the client side (web). These methods are GET, HEAD, OPTIONS, TRACE.</p>
+			<h4>2. Idempotent Methods</h4><p>Idempotent methods are GET, HEAD, PUT and DELETE share this property. </p>
+		    <h4>3. Cacheable Methods</h4><p>Cacheable methods are responses that we get can be cache for easily retrieving.</p>
+		</div>
+		
+	<div class="messageHeadersMain" id="messageHeaders">
+        <h2>HTTP Message Headers</h2>
+		
+		<h3 id="GeneralHF">A. General Header Fields</h3>
+		
+		<ul>
+		  <li>Cache-control – our request can be cache / not</li>
+		  <li>Connection – used to control persistent connection</li>
+		  <li>Date – date when the request / response was held</li>
+		  <li>Pragma – old headers (HTTP 1.0); no cache control and connection (generic directive)</li>
+		  <li>Trailer – trailers available</li>
+		  <li>Transfer-encoding – chunk encoding</li>
+		  <li>Upgrade – possible to switch protocols</li>
+		  <li>Via – includes in the proxy headers which is the intersection</li>
+		  <li>Warning – used to indicate that there is something wrong / issue with the body</li>
+		</ul>
+			
+		<h3 id="ReguestHF">B. Request Header Fields</h3>
+		
+		<ul>
+		  <li>Accept – used for negotiating; mime types</li>
+		  <li>Accept-charset - mime types</li>
+		  <li>Accept-encoding - mime types</li>
+		  <li>Accept-Language – different languages</li>
+		  <li>Authorization – doing some protected resource</li>
+		  <li>Expect – 100 (Continue) or 417 (Expectation Failed)</li>
+		  <li>From – e-mail address of client (person generating request)</li>
+		  <li>Host – required header (virtual host)</li>
+		  <li>If-Match – conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-Modified-Since - conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-None-Match - conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-Range - conditional request; serves the service if it satisfy the condition</li>
+		  <li>If-Unmodified-Since - conditional request; serves the service if it satisfy the condition</li>
+		  <li>Max-forward </li>
+		  <li>Proxy-Authorization </li>
+		  <li>Range – retrieve pieces of contents</li>
+		  <li>Referrer – where the request originated from</li>
+		  <li>User-Agent </li>
+		</ul>
+		
+		<h3 id="ResponseHF">C. Response Header Fields</h3>
+		
+		<ul>
+		   <li>Accept-Range</li>
+		   <li>Age – age of the resource</li>
+		   <li>E-Tag – default configuration</li>
+		   <li>Location </li>
+		   <li>Proxy-Authenticate </li>
+		   <li>Retry-After – used conjunction with the error 503 (Service Unavailable)</li>
+		   <li>Server </li>
+		   <li>Vary </li>
+		   <li>WWW-Authenticate </li>
+		</ul>
+	
+		<h3 id="EntityHF">D. Entity Header Fields</h3>
+		
+		<ul>
+		   <li>Allow – says what we can do in resource</li>
+		   <li>Content-encoding – how entity is encoded</li>
+		   <li>Content-language – specification language</li>
+		   <li>Content-length – length of the request in bytes</li>
+		   <li>Content-location – given a file you asked for</li>
+		   <li>Content-MD5 – digest algorithm; computes the hash of the resource</li>
+		   <li>Content-range – portion of range (resource)</li>
+		   <li>Content-type </li>
+		   <li>Expires – resource can be hash at a certain period of resource</li>
+		   <li>Last Modified – time stop of resource; used (conditional request)</li>
+		</ul>
+	</div>
+			
         <div class="statusMain" id="status">
             <h2>HTTP Status Codes</h2>
             <div class="info" id="1xx">
                 <h3>Informational 1xx</h3>
                 <ul>
-                    <li><p>100 - Continue</p></li>
-                    <li><p>101 - Switching Protocols</p></li>
+                    <li><p>100 Continue – client is sending expect header</p></li>
+                    <li><p>101 Switching Protocols – upgrading protocols</p></li>
                 </ul>
             </div>
             
             <div class="succesful" id="2xx">
                 <h3>Successful 2xx</h3>
                 <ul>
-                    <li><p>200 - OK</p></li>
-                    <li><p>201 - Created</p></li>
-                    <li><p>202 - Accepted</p></li>
-                    <li><p>203 - Non-Authorative Information</p></li>
-                    <li><p>204 - No Content</p></li>
-                    <li><p>205 - Reset Content</p></li>
-                    <li><p>206 - Partial</p></li>
+                    <li><p>200 OK</p></li>
+                    <li><p>201 Created</p></li>
+                    <li><p>202 Accepted – already receive the request </p></li>
+                    <li><p>203 Non-Authorative Information</p></li>
+                    <li><p>204 No Content</p></li>
+                    <li><p>205 Reset Content – used to tell client to reset forms</p></li>
+                    <li><p>206 Partial Content – range request</p></li>
                 </ul>
             </div>
             
             <div class="redirection" id="3xx">
                 <h3>Redirection 3xx</h3>
                 <ul>
+
                     <li><p>300 - Multiple Choices</p></li>
                     <li><p>301 - Moved Permanently</p></li>
                     <li><p>302 - Found</p></li>
@@ -118,12 +219,24 @@
                     <li><p>306 - Switch Proxy</p></li>
                     <li><p>307 - Temporary Redirect</p></li>
                     <li><p>308 - Permanently Redirect</p></li>
+
+                    <li><p>300 Multiple Choices – returned app if there are multiple resources</p></li>
+                    <li><p>301 Moved Permanently – change bookmark</p></li>
+                    <li><p>302 Found</p></li>
+                    <li><p>303 See Other</p></li>
+                    <li><p>304 Not Modified – conditional request</p></li>
+                    <li><p>305 Use Proxy – go through a proxy</p></li>
+                    <li><p>306 Switch Proxy</p></li>
+                    <li><p>307 Temporary Redirect – shouldn’t make a change</p></li>
+                    <li><p>308 Permanently Redirect</p></li>
+
                 </ul>
             </div>
             
             <div class="clientError" id="4xx">
                 <h3>Client Error 4xx</h3>
                 <ul>
+
                     <li><p>400 - Bad Request</p></li>
                     <li><p>401 - Unauthorized</p></li>
                     <li><p>402 - Payment Required</p></li>
@@ -143,18 +256,48 @@
                     <li><p>416 - Requested Range Not Satisfiable</p></li>
                     <li><p>417 - Expectation Failed</p></li>
                     <li><p>426 - Upgrade Required</p></li>
+
+                    <li><p>400 Bad Request – request malform missing something</p></li>
+                    <li><p>401 Unauthorized – accessing authorized page</p></li>
+                    <li><p>402 Payment Required – allowing payment (e-commerce)</p></li>
+                    <li><p>403 Forbidden – not allow to access resource</p></li>
+                    <li><p>404 Not Found</p></li>
+                    <li><p>405 Method Not Allowed – put (not configured)</p></li>
+                    <li><p>406 Not Acceptable – mime type / particular language</p></li>
+                    <li><p>407 Proxy Authentication Required – redirected to proxy, authenticate first</p></li>
+                    <li><p>408 Request Timeout – process of request time-out</p></li>
+                    <li><p>409 Conflict</p></li>
+                    <li><p>410 Gone – no longer available</p></li>
+                    <li><p>411 Length - not specify how long data</p></li>
+                    <li><p>412 Precondition Failed – put (already exist – non match)</p></li>
+                    <li><p>413 Request Entity Too Large – can accept only to a maximum size</p></li>
+                    <li><p>414 Request-URI Too Long – maximum size to URL (can’t handle by server)</p></li>
+                    <li><p>415 Unsupported Media Type – doesn’t know how to handle content</p></li>    
+                    <li><p>416 Requested Range Not Satisfiable</p></li>
+                    <li><p>417 Expectation Failed – issuing expect header</p></li>
+                    <li><p>426 Upgrade Required – upgrade first (http 2)</p></li>
+
                 </ul>
             </div>
             
             <div class="serverError" id="5xx">
                 <h3>Client Error 5xx</h3>
                 <ul>
+
                     <li><p>500 - Internal Server Error</p></li>
                     <li><p>501 - Not Implemented</p></li>
                     <li><p>502 - Bad Gateway</p></li>
                     <li><p>503 - Service Unavailable</p></li>
                     <li><p>504 - Gateway Timeout</p></li>
                     <li><p>505 - HTTP Version Not Supported</p></li>
+
+                    <li><p>500 Internal Server Error - misconfiguration in server</p></li>
+                    <li><p>501 Not Implemented – server doesn’t know how to handle request</p></li>
+                    <li><p>502 Bad Gateway – there is a problem in gateway resource</p></li>
+                    <li><p>503 Service Unavailable – maintenance work</p></li>
+                    <li><p>504 Gateway Timeout - gateway (overloaded)</p></li>
+                    <li><p>505 HTTP Version Not Supported - specify versions</p></li>
+
                 </ul>
             </div>
         </div>  
