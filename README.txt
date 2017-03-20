@@ -9,6 +9,7 @@ Access website locally:
 ========================================================================================================================================
 
 Through firebase:
+Important: Make sure to have an Internet Connection.
 	1. Go to "firebase.google.com" then create a user.
 	2. After creating a user, click on "Console" then select "Create New Project".
 	3. After filling the requirements, you will have your project.
