@@ -11,10 +11,8 @@
 </head>
 
 <header>
-    <div class="jumbotron text-center">
         <h1>Web Systems and Technologies</h1>
         <p>- A course website -</p>
-    </div>
 </header>
 <body>
     <div id="sidetab">
@@ -36,62 +34,11 @@
                 </ul>
             </nav>
         </div>
+    
     <div id="content">
         <div>
             <h1></h1>
         </div>
-
-        <div class="features" id="feat">
-            <h2>HTTP Basic Features</h2>
-            <h3>HTTP is connectionless.</h3>
-            <p>The HTTP client, i.e., a browser initiates an HTTP request and after a request is made, the client disconnects from the server and waits for a response. The server processes the request and re-establishes the connection with the client to send a response back.</p>
-            <h3>HTTP is media independent.</h3>
-            <p>It means, any type of data can be sent by HTTP as long as both the client and the server know how to handle the data content. It is required for the client as well as the server to specify the content type using appropriate MIME-type.</p>
-            <h3>HTTP is stateless.</h3>
-            <p>As mentioned above, HTTP is connectionless and it is a direct result of HTTP being a stateless protocol. The server and client are aware of each other only during a current request. Afterwards, both of them forget about each other. Due to this nature of the protocol, neither the client nor the browser can retain information between different requests across the web pages.</p>
-            <h3>HTTP provides support for other functionalities such as:</h3>
-            <ul>
-                <li><p>Cache Control</p></li>
-                <li><p>Content media type (MIME - Multipurpose Internet Mail Extensions) specification</p></li>
-                <li><p>Language and character specification</p></li>
-                <li><p>Content negotiation</p></li>
-                <li><p>Content negotiation</p></li>
-                <li><p>Client-server protocol</p></li>
-                <li><p>Persistent connections</p></li>
-                <li><p>Request pipelining</p></li>
-                <li><p>Authentication/authorization</p></li>
-            </ul>
-        </div>
-        <div class="resourceAddr" id="resrcAddr">
-            <h2>HTTP Resource Addressing</h2>
-            <p>HTTP resources are identified using URI's</p>
-            <h3>What is URI?</h3>
-            <p>URI or Uniform Resource Identifier is a string of characters used to identify a resource. Such identification enables interaction with representations of the resource over a network, typically the World Wide Web, using specific protocols. <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
-            <h3>URI Parts and components</h3>
-            <h4>Generic URI form is: scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]</h4>
-            <h3>Where the:</h3>
-            <h4>Scheme</h4><p>The scheme, consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:). <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
-            <h4>Authority</h4><p>The authority part is comprising with
-            an optional authentication section of a user name and password, separated by a colon, followed by an @ symbol.
-            A "host", consisting of either a registered name (including but not limited to a hostname), or an IP address. IPv4 Also, addresses must be in dot-decimal notation, and IPv6 addresses must be enclosed in brackets and an optional "port number", separated from the hostname by a colon. <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
-            <h4>Path</h4><p>A path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one.[9] The path must begin with a single slash (/) if an authority part was present, and may also if one was not, but must not begin with a double slash. The path is always defined, though the defined path may be empty (zero length). <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
-            <h4>Query</h4><p>A query is optional and it is separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. Its syntax is not well defined, but by convention is most often a sequence of attribute–value pairs separated by a delimiter. 
-            <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
-            <h4>Fragment</h4><p>A fragment is optional and is separated from the preceding part by a hash (#). The fragment contains a fragment identifier providing direction to a secondary resource, such as a section heading in an article identified by the remainder of the URI. When the primary resource is an HTML document, the fragment is often an id attribute of a specific element, and web browsers will scroll this element into view. <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">From Wikipedia</a></p>
-            
-            
-        </div>
-        <div class="requestMethodsMain" id="requestMethods">
-            <h2>HTTP Request Methods</h2>
-            <h4>GET</h4><p>GET is a request method that represents a specified source. By having a GET method, request should only retrieve data.</p>
-	        <h4>HEAD</h4><p>HEAD is a request method that asks for a response identical of a GET request. It has no response body.</p>
-	        <h4>POST</h4><p>POST, on the other hand, is a method used to submit an entity to a specific source. It usually changes in state or side effects on the server.</p>
-	        <h4>PUT</h4><p>PUT is a method that replaces all current representations of the resource with the request payload.</p>
-	        <h4>DELETE</h4><p>DELETE, as the term implies, is a method that deletes all specified resource.</p>
-	        <h4>CONNECT</h4><p>CONNECT method is used as a tunnel to the server identified by the resource.</p>
-	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource.</p>
-	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource.</p>
-
 	    
            <div class="requestMethodsMain" id="requestMethods">
            <h3>A. Standard Methods</h3>
@@ -103,7 +50,6 @@
 	        <h4>CONNECT</h4><p>CONNECT method is used to request the establishment of a tunnel to the server identified by the resource.</p>
 	        <h4>OPTIONS</h4><p>OPTIONS is a method used to describe the communication for the resource. The request may be *.</p>
 	        <h4>TRACE</h4><p>TRACE method performs a message loop-back test along the path to the resource. Typically used for testing or diagnostic of the request or response chain.</p>
-
 	        <h4>PATCH</h4><p>PATCH is a method used to apply partial modifications to a resource.</p>
 
 			<h3 id="extensionMethods">B. Extension Methods</h3>
@@ -208,18 +154,6 @@
             <div class="redirection" id="3xx">
                 <h3>Redirection 3xx</h3>
                 <ul>
-
-                    <li><p>300 - Multiple Choices</p></li>
-                    <li><p>301 - Moved Permanently</p></li>
-                    <li><p>302 - Found</p></li>
-                    <li><p>303 - See Other</p></li>
-                    <li><p>302 - Found</p></li>
-                    <li><p>304 - Not Modified</p></li>
-                    <li><p>305 - Use Proxy</p></li>
-                    <li><p>306 - Switch Proxy</p></li>
-                    <li><p>307 - Temporary Redirect</p></li>
-                    <li><p>308 - Permanently Redirect</p></li>
-
                     <li><p>300 Multiple Choices – returned app if there are multiple resources</p></li>
                     <li><p>301 Moved Permanently – change bookmark</p></li>
                     <li><p>302 Found</p></li>
@@ -229,34 +163,12 @@
                     <li><p>306 Switch Proxy</p></li>
                     <li><p>307 Temporary Redirect – shouldn’t make a change</p></li>
                     <li><p>308 Permanently Redirect</p></li>
-
                 </ul>
             </div>
             
             <div class="clientError" id="4xx">
                 <h3>Client Error 4xx</h3>
                 <ul>
-
-                    <li><p>400 - Bad Request</p></li>
-                    <li><p>401 - Unauthorized</p></li>
-                    <li><p>402 - Payment Required</p></li>
-                    <li><p>403 - Forbidden</p></li>
-                    <li><p>404 - Not Found</p></li>
-                    <li><p>405 - Method Not Allowed</p></li>
-                    <li><p>406 - Not Acceptable</p></li>
-                    <li><p>407 - Proxy Authentication Required</p></li>
-                    <li><p>408 - Request Timeout</p></li>
-                    <li><p>409 - Conflict</p></li>
-                    <li><p>410 - Gone</p></li>
-                    <li><p>411 - Length</p></li>
-                    <li><p>412 - Precondition Failed</p></li>
-                    <li><p>413 - Request Entity Too Large</p></li>
-                    <li><p>414 - Request-URI Too Long</p></li>
-                    <li><p>415 - Unsupported Media Type</p></li>    
-                    <li><p>416 - Requested Range Not Satisfiable</p></li>
-                    <li><p>417 - Expectation Failed</p></li>
-                    <li><p>426 - Upgrade Required</p></li>
-
                     <li><p>400 Bad Request – request malform missing something</p></li>
                     <li><p>401 Unauthorized – accessing authorized page</p></li>
                     <li><p>402 Payment Required – allowing payment (e-commerce)</p></li>
@@ -276,28 +188,18 @@
                     <li><p>416 Requested Range Not Satisfiable</p></li>
                     <li><p>417 Expectation Failed – issuing expect header</p></li>
                     <li><p>426 Upgrade Required – upgrade first (http 2)</p></li>
-
                 </ul>
             </div>
             
             <div class="serverError" id="5xx">
-                <h3>Client Error 5xx</h3>
+                <h3>Client Error 4xx</h3>
                 <ul>
-
-                    <li><p>500 - Internal Server Error</p></li>
-                    <li><p>501 - Not Implemented</p></li>
-                    <li><p>502 - Bad Gateway</p></li>
-                    <li><p>503 - Service Unavailable</p></li>
-                    <li><p>504 - Gateway Timeout</p></li>
-                    <li><p>505 - HTTP Version Not Supported</p></li>
-
                     <li><p>500 Internal Server Error - misconfiguration in server</p></li>
                     <li><p>501 Not Implemented – server doesn’t know how to handle request</p></li>
                     <li><p>502 Bad Gateway – there is a problem in gateway resource</p></li>
                     <li><p>503 Service Unavailable – maintenance work</p></li>
                     <li><p>504 Gateway Timeout - gateway (overloaded)</p></li>
                     <li><p>505 HTTP Version Not Supported - specify versions</p></li>
-
                 </ul>
             </div>
         </div>  
