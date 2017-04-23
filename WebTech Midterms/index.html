@@ -75,7 +75,7 @@
                                         <h5 id="quoted">- Tim Berners-Lee</h5>
                                     </div>
                                     <div id="timberner">
-                                        <figure id="timberner"class="member-photo"><img src = "img/timberner.png" alt="Father of the WWW"/></figure>
+                                        <figure id="timberner" class="member-photo"><img src = "img/timberner.png" alt="Father of the WWW"/></figure>
                                     </div>
         						</div>
 
@@ -196,11 +196,12 @@
 							  
                                 <article class="col-md-4 isotopeItem internet">
                                     <h1>The Internet</h1>
-									<p>The internet has revolutionized the world of computers and communications. It is at once a world-wide broadcasting capability, a mechanism for information dissemination, and a medium for interaction between individuals and their computers without physical presence. A global system of interconnected computer networks that use the standard Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.
-                                    <br><br>
-                                    The very first traces of social interactions that could be enabled via networking was during in August 1962. It was a series of memos written by J.C.R. Licklider of MIT. He was the first head of the coputer research program at DARPA, starting in October 1962. While at DARPA, he convinced many other colleagues, which are Ivan Sutherland, Bob Taylor, and MIT researcher Lawrence G. Roberts, regarding the importance of networking concept. (Information from InternetSociety.org)
-                                    <br><br>
-                                    Vinton Cerf is known as the father of the internet. He is the co-designer of TCP/IP protocols and the architecture of the internet. He began his work in DARPA, responsibe for identifying new enabling technologies to support the development of advanced, Internet-based products and services.
+								    <p>The internet has revolutionized the world of computers and communications. It is at once a world-wide broadcasting capability, a mechanism for information dissemination, and a medium for interaction between individuals and their computers without physical presence. A global system of interconnected computer networks that use the standard Internet Protocol Suite (TCP/IP) to serve billions of users worldwide.</p>
+                                    
+                                    <p>The very first traces of social interactions that could be enabled via networking was during in August 1962. It was a series of memos written by J.C.R. Licklider of MIT. He was the first head of the coputer research program at DARPA, starting in October 1962. While at DARPA, he convinced many other colleagues, which are Ivan Sutherland, Bob Taylor, and MIT researcher Lawrence G. Roberts, regarding the importance of networking concept. (Information from InternetSociety.org)
+                                    </p>
+                                    
+                                    <p>Cerf is known as the father of the internet. He is the co-designer of TCP/IP protocols and the architecture of the internet. He began his work in DARPA, responsibe for identifying new enabling technologies to support the development of advanced, Internet-based products and services.
                                     </p>
                                 </article>
 
@@ -208,25 +209,34 @@
                                     <h1>The World Wide Web</h1>
 									<p>
                                     The World Wide Web is a global information medium which users can read and write via computers connected to the Internet. The term is often mistakenly used as a synonym for the Internet itself, but the Web is a service that operates over the Internet, as e-mail does.
-                                    <br><br>
-                                    Tim-Berners Lee is known to be the father of the World Wide Web. In September 1994, Berners-Lee founded the World Wide Web Consortium (W3C) at the Massachusetts Institute of Technology with support from the Defense Advanced Research Projects Agency (DARPA) and the European Commission. It comprised various companies that were willing to create standards and recommendations to improve the quality of the Web. The World Wide Web was introduced in 1969 and established in 1989.
+                                    </p>
+                                    
+                                    <p>Tim-Berners Lee is known to be the father of the World Wide Web. In September 1994, Berners-Lee founded the World Wide Web Consortium (W3C) at the Massachusetts Institute of Technology with support from the Defense Advanced Research Projects Agency (DARPA) and the European Commission. It comprised various companies that were willing to create standards and recommendations to improve the quality of the Web. The World Wide Web was introduced in 1969 and established in 1989.
                                     </p>
                                 </article>
 								
 
                                 <article class="col-md-4 isotopeItem http">
-									<h1>HTTP and its Features</h1>
-                                    <p>HTTP is a protocol that is used to deliver data on the World Wide Web. The default port for HTTP is 80. HTTPS uses the port 443.</p>
-                                    <br>
+								    <div class="panes">
+                                    <h1>HTTP and its Features</h1>
+                                    <p>HTTP is a protocol that is used to deliver data on the World Wide Web. The default port of HTTP is port 80 while HTTPS uses the port 443.</p>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>HTTP is connectionless.</h3>
                                     <p>The HTTP client, i.e., a browser initiates an HTTP request and after a request is made, the client disconnects from the server and waits for a response. The server processes the request and re-establishes the connection with the client to send a response back.</p>
-                                    <br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>HTTP is media independent.</h3>
                                     <p>It means, any type of data can be sent by HTTP as long as both the client and the server know how to handle the data content. It is required for the client as well as the server to specify the content type using appropriate MIME-type.</p>
-                                    <br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>HTTP is stateless.</h3>
                                     <p>As mentioned above, HTTP is connectionless and it is a direct result of HTTP being a stateless protocol. The server and client are aware of each other only during a current request. Afterwards, both of them forget about each other. Due to this nature of the protocol, neither the client nor the browser can retain information between different requests across the web pages.</p>
-                                    <br>
+                                    </div>
+                                   <div class="panes">
                                     <h3>HTTP provides support for other functionalities such as:</h3>
                                     <ul>
                                         <li>Cache Control</li>
@@ -238,35 +248,54 @@
                                         <li>Request pipelining</li>
                                         <li>Authentication/authorization</li>
                                     </ul>
+                                    </div>
                                   </article>
 
 
 
                                 <article class="col-md-4 isotopeItem resourceAddressing">
-								    <h1>HTTP Resource Addressing</h1>
+                                    <h1>HTTP Resource Addressing</h1>
                                     <p>HTTP resources are identified using URI's.</p>
-                                    <br>
+                                    
+                                    <div class="panes">
                                     <h3>What is URI?</h3>
                                     <p>URI or Uniform Resource Identifier is a string of characters used to identify a resource. Such identification enables interaction with representations of the resource over a network, typically the World Wide Web, using specific protocols. -From Wikipedia</p>
-                                    <br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>URI Parts and components</h3>
-                                    <p><b>Generic URI form is: </b> scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]</p>
-                                    <p><b>Scheme</b></p>
+                                    <p>Generic URI form is: scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]</p>
+                                    </div>
+                                    
+                                    <div class="panes">
+                                    <h3>Scheme</h3>
                                     <p>The scheme, consisting of a sequence of characters beginning with a letter and followed by any combination of letters, digits, plus (+), period (.), or hyphen (-). Although schemes are case-insensitive, the canonical form is lowercase and documents that specify schemes must do so with lowercase letters. It is followed by a colon (:). -From Wikipedia</p>
-                                    <p><b>Authority</b></p>
+                                    </div>
+                                    
+                                    <div class="panes">
+                                    <h3>Authority</h3>
                                     <p>The authority part is comprising with an optional authentication section of a user name and password, separated by a colon, followed by an @ symbol. A "host", consisting of either a registered name (including but not limited to a hostname), or an IP address. IPv4 Also, addresses must be in dot-decimal notation, and IPv6 addresses must be enclosed in brackets and an optional "port number", separated from the hostname by a colon. From Wikipedia</p>
-                                    <p><b>Path</b></p>
+                                    </div>
+                                    
+                                    <div class="panes">
+                                    <h3>Path</h3>
                                     <p>A path, which contains data, usually organized in hierarchical form, that appears as a sequence of segments separated by slashes. Such a sequence may resemble or map exactly to a file system path, but does not always imply a relation to one.[9] The path must begin with a single slash (/) if an authority part was present, and may also if one was not, but must not begin with a double slash. The path is always defined, though the defined path may be empty (zero length). -From Wikipedia</p>
-                                    <p><b>Query</b></p>
+                                    </div>
+                                    
+                                    <div class="panes">
+                                    <h3>Query</h3>
                                     <p>A query is optional and it is separated from the preceding part by a question mark (?), containing a query string of non-hierarchical data. Its syntax is not well defined, but by convention is most often a sequence of attribute–value pairs separated by a delimiter. -From Wikipedia</p>
-                                    <p><b>Fragment</b></p>
-                                    <p>A fragment is optional and is separated from the preceding part by a hash (#). The fragment contains a fragment identifier providing direction to a secondary resource, such as a section heading in an article identified by the remainder of the URI. When the primary resource is an HTML document, the fragment is often an id attribute of a specific element, and web browsers will scroll this element into view. -From Wikipedia
-</p>
+                                    </div>
+                                    
+                                    <div class="panes">
+                                    <h3>Fragment</h3>
+                                    <p>A fragment is optional and is separated from the preceding part by a hash (#). The fragment contains a fragment identifier providing direction to a secondary resource, such as a section heading in an article identified by the remainder of the URI. When the primary resource is an HTML document, the fragment is often an id attribute of a specific element, and web browsers will scroll this element into view.<i>-From Wikipedia</i></p>
+                                    </div>
                                 </article>
                                     
                                     
                                 <article class="col-md-4 isotopeItem requestMessage">
-								    <h1>Request Message</h1>
+                                    <h1>Request Message</h1>
                                     <ul>
                                         <li>Status line</li>
                                         <li>Message Response Headers</li>
@@ -276,8 +305,12 @@
                                 </article>
                                     
                                 <article class="col-md-4 isotopeItem requestMethods">
-								    <h1>HTTP Request Methods</h1>
+								    <div class="panes">
+                                    <h1>HTTP Request Methods</h1>
                                     <p>The request method involves the semantics of the request. It indicates the purpose of the client that has made this request to the server and retrieves a response from the server if the request made is successful.</p>
+                                    </div>
+                                    
+                                     <div class="panes">
                                     <h3>A. Standard Methods</h3>
                                     <ul>
                                         <li>GET</li>
@@ -299,23 +332,31 @@
                                         <li>Patch</li>
                                         <p>A method used to apply partial modifications to a resource.</p>
                                     </ul>
+                                    </div>
                                 </article>
                                     
                                 <article class="col-md-4 isotopeItem messageHeaders">
-								    <h1>HTTP Message Headers</h1>
+								    <div class="panes">
+                                    <h1>HTTP Message Headers</h1>
                                     <p>HTTP header fields includes general header fields, request-header fields, response-header fields, and entity-header fields. Header fields indicates the status of the communication between the client and server.</p>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>A. General Header Fields (RFC 2616)</h3>
                                     <ul>
-                                        <li><b>Cache-control</b> – our request can be cache / not</li>
-                                        <li><b>Connection</b> – used to control persistent connection</li>
-                                        <li><b>Date</b> – date when the request / response was held</li>
-                                        <li><b>Pragma</b> – old headers (HTTP 1.0); no cache control and connection (generic directive)</li>
-                                        <li><b>Trailer</b> – trailers available</li>
-                                        <li><b>Transfer-encoding</b> – chunk encoding</li>
-                                        <li><b>Upgrade</b> – possible to switch protocols</li>
-                                        <li><b>Via</b> – includes in the proxy headers which is the intersection</li>
-                                        <li><b>Warning</b> – used to indicate that there is something wrong/ issue with the body</li>
-                                    </ul><br>
+                                        <li>Cache-control – our request can be cache / not</li>
+                                        <li>Connection – used to control persistent connection</li>
+                                        <li>Date – date when the request / response was held</li>
+                                        <li>Pragma – old headers (HTTP 1.0); no cache control and connection (generic directive)</li>
+                                        <li>Trailer – trailers available</li>
+                                        <li>Transfer-encoding – chunk encoding</li>
+                                        <li>Upgrade – possible to switch protocols</li>
+                                        <li>Via – includes in the proxy headers which is the intersection</li>
+                                        <li>Warning – used to indicate that there is something wrong/ issue with the body</li>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>B. Request Header Fields (RFC 2616)</h3>
                                     <ul>
                                         <li>Accept</li>
@@ -336,7 +377,10 @@
                                         <li>Range</li>
                                         <li>Referrer</li>
                                         <li>User-Agent</li>
-                                    </ul><br>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>C. Response Header Fields (RFC 2616)</h3>
                                     <ul>
                                         <li>Accept-Range</li>
@@ -348,30 +392,39 @@
                                         <li>Server</li>
                                         <li>Vary</li>
                                         <li>WWW-Authenticate</li>
-                                    </ul><br>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>D. Entity Header Fields (RFC 2616)</h3>
                                     <ul>
-                                        <li><b>Allow</b> – says what we can do in the resouce</li>
-                                        <li><b>Content-encoding</b> – how entity is encoded</li>
-                                        <li><b>Content-language</b> – specified language</li>
-                                        <li><b>Content-length</b> – length of the request in bytes</li>
-                                        <li><b>Content-location</b> – location of the file being asked</li>
-                                        <li><b>Content-MD5</b> – digest algorithm; computes the hash of the resource</li>
-                                        <li><b>Content-range</b> – portion of the resource</li>
-                                        <li><b>Content-type</b></li>
-                                        <li><b>Expires</b> – resource can be cached at a certain period of resource</li>
-                                        <li><b>Last Modified</b> – date where the resource is last modified.</li>
-                                    </ul><br>
+                                        <li>Allow – says what we can do in the resouce</li>
+                                        <li>Content-encoding – how entity is encoded</li>
+                                        <li>Content-language – specified language</li>
+                                        <li>Content-length – length of the request in bytes</li>
+                                        <li>Content-location – location of the file being asked</li>
+                                        <li>Content-MD5 – digest algorithm; computes the hash of the resource</li>
+                                        <li>Content-range – portion of the resource</li>
+                                        <li>Content-type</li>
+                                        <li>Expires – resource can be cached at a certain period of resource</li>
+                                        <li>Last Modified – date where the resource is last modified.</li>
+                                    </ul>
+                                    </div>
                                 </article>
                                     
                                 <article class="col-md-4 isotopeItem statusCodes">
 								    <h1>HTTP Status Codes</h1>
                                     <p>Status codes indicates the response of a server from a request whether it is successful or not.</p>
+                                    
+                                    <div class="panes">
                                     <h3>Informational 1xx</h3>
                                     <ul>
                                         <li>100 Continue</li>
                                         <li>101 Switching Protocols</li>
-                                    </ul><br>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>Successful 2xx</h3>
                                     <ul>
                                         <li>200 OK</li>
@@ -381,19 +434,25 @@
                                         <li>204 No Content</li>
                                         <li>205 Reset Content</li>
                                         <li>206 Partial Content</li>
-                                    </ul><br>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>Redirection 3xx</h3>
                                     <ul>
                                         <li>300 Multiple Choices</li>
                                         <li>301 Moved Permanently</li>
                                         <li>302 Found</li>
-                                        <li>303 See Other></li>
+                                        <li>303 See Other</li>
                                         <li>304 Not Modified</li>
                                         <li>305 Use Proxy</li>
                                         <li>306 Switch Proxy</li>
                                         <li>307 Temporary Redirect</li>
                                         <li>308 Permanently Redirect</li>
-                                    </ul><br>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>Client Error 4xx</h3>
                                     <ul>
                                         <li>400 Bad Request</li>
@@ -415,7 +474,10 @@
                                         <li>416 Requested Range Not Satisfiable</li>
                                         <li>417 Expectation Failed</li>
                                         <li>426 Upgrade Required</li>
-                                    </ul><br>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>Server Error 5xx</h3>
                                     <ul>
                                         <li>500 Internal Server Error</li>
@@ -424,7 +486,8 @@
                                         <li>503 Service Unavailable</li>
                                         <li>504 Gateway Timeout</li>
                                         <li>505 HTTP Version Not Supported</li>
-                                    </ul>      
+                                    </ul>   
+                                    </div>
                                 </article>
                             </div>
                         </div>
@@ -463,20 +526,29 @@
                             <div class="row">
                               <div class="portfolio-items isotopeWrapper clearfix" id="3">
                                 <article class="col-md-4 isotopeItem html">
+                                    <div class="panes">
                                     <h1>HTML</h1>
                                     <p>HTML is a hypertext markup language used to create documents (i.e. web pages) in the World Wide Web</p>
-				                    <br><br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h1>Role in Modern Web Development</h1>
                                     <ul>
                                       <li>structure(and content)</li> <li>presentation/aesthetics (mostly deprecated in favor of style sheets)</li>  <li>behavioral</li>
                                     </ul>
-                                    <br><br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h1>Inventor</h1>
                                     <p>Tim-Berners Lee</p>
-                                    <br><br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h1>Oversees the Development</h1>
                                     <p>WWW(W3C)</p>
-                                    <br><br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h1>Versions</h1>
                                     <ul>
                                         <li>HTML 1.0 (1990)</li>
@@ -492,10 +564,14 @@
                                         <li>HTML 5.1</li>
                                         <li>HTML 5.2 (working draft)</li>
                                     </ul>
-                                    <br><br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h1>Documents Specify the HTML Standards</h1>
                                     <p>W3C Recommendation</p>
-                                    <br><br>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h1>Elements</h1>
                                     <h3>A. Head</h3>
                                     <ul>
@@ -506,6 +582,9 @@
                                         <li>style</li>
                                         <li>script</li>
                                     </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
                                     <h3>B. Body</h3>
                                     <ul>
                                         <li>Grouping elements (div, span) </li>
@@ -530,6 +609,7 @@
                                         <li>Frames, noframes, iframe </li>
                                         <li>Frameset (for frameset DTD) </li>
                                     </ul>
+                                    </div>
                                 </article>
                                 </div>
                                         

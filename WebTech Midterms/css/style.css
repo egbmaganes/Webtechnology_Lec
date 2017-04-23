@@ -1148,3 +1148,9 @@ Media queries
 		margin-bottom: 30px;
 	}
 }
+
+.panes {
+    height: 50%;
+    width: auto;
+    padding: 10px;
+}
