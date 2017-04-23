@@ -1096,7 +1096,7 @@ section .chptrdesc {
 
 .motivation {
     background-color: black;
-    height: 2.3%;
+    height: 1.2% !important;
 }
 
 /* ========================================
@@ -1155,4 +1155,7 @@ Media queries
     width: auto;
     padding-top: 3%;
 }
+
+
+
 
