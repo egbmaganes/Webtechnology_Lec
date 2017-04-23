@@ -545,7 +545,7 @@
                               <a href="#" class="current btn-theme btn-small" data-filter="*">All</a>
                               <a href="#" class="btn-theme btn-small" data-filter=".html">HTML</a>
                               <a href="#" class="btn-theme btn-small" data-filter=".css">CSS</a>
-                              <a href="#" class="btn-theme btn-small" data-filter=".javascipt">Javascipt</a>
+                              <a href="#" class="btn-theme btn-small" data-filter=".javascript">Javascript</a>
                           </nav>
                           <div class="col-md-12">
                             <div class="row">
@@ -792,8 +792,147 @@
                             <div class="row">
                               <div class="portfolio-items isotopeWrapper clearfix" id="3">
                                 <article class="col-md-4 isotopeItem javascript">
-                                   
-                                </article>
+                                <h1>Javascript</h1>
+								<p>Developed circa 1995 by Brendan Eich at Netscape Communications as the scripting language for the Netscape Navigator Browser</p>
+                                <p>Formerly called Mocha, then LiveScript, then JavaScript</p>
+								<p>Standardized by ECMA International as ECMAScript</p>
+								<br><br>
+								<h1>Versions</h1>
+								<h3>Latest Version</h3>
+								<ul>
+									<li>JavaScipt 1.8.1</li>
+									<li>ECMAScript 5 [ECMA-262 5th Edition]</li>
+								</ul>
+								<h3>Common Version</h3>
+								<ul>
+									<li>JavaScript 1.5</li>
+									<li>Jscript 5.5</li>
+									<li>ECMAScript v3 [ECMA-262 3rd Edition]</li>
+								</ul>
+								<br><br>
+								<h1>Document Manipulation</h1>
+								<ul>
+									<li>Embedded Script</li>
+									<li>Externally Link Script</li>
+									<dt>Async – middle</dt>
+									<dt>Nonasync defer – at the end</dt>
+								</ul>
+								<br><br>
+								<h1>Attributes that are Not Part of Basic Sets</h1>
+								<ul>
+									<li>h1.innerText = “hello”;</li>
+									<li>h1.style = “color:blue”; </li>
+									<li>h1.style.color = “red”; </li>
+									<li>h1.style.fontsize = ‘2em’; </li>
+								</ul>
+								<br><br>
+								<h1>Changing Style</h1>
+								<ul>
+									<li>document.getElementsByID</li>
+									<li>document.getElementsByTagName</li>
+									<li>document.getElementsByClassName</li>
+									<li>document.getElementsByTagNameNS</li>
+									<li>document.getElementsByName</li>
+
+								</ul>
+								<br><br>
+								<h1>Subsection of a Document</h1>
+								<ul>
+								<li>querySelector(‘p’)- returns only the 1st one</li>
+								<li>querySelectorAll(‘p’) – returns all matching elements</li>
+								<li>querySelectorAll(‘p:first-child’) </li>
+								<li>querySelectorAll(‘p:first-of-type’) </li>
+								<li>querySelectorAll(‘body h1  p’) </li>
+								<li>querySelectorAll(‘h1 + p’) </li>
+								</ul>
+								<br><br>
+								<h1>For Document or for Specific Elements </h1>
+								<ul>
+								<li>p.document.querySelector(‘p’) </li>
+								<li>p.document.querySelector(‘h1’) </li>
+								<li>p.document.querySelector(‘body’) </li>
+								<li>p.document.querySelector(‘body > p’) </li>
+								</ul>
+								<br><br>
+								<h1>Possible to Traverse the Entire</h1>
+								<ul>
+								<li>document.body.children.length</li>
+								<li>document.body.children</li>
+								<li>document.body.children[0] </li>
+								<li>document.body.childElementCount</li>
+								<li>document.body.firstChild</li>
+								<li>document.body.firstElementChild</li>
+								<li>document.body.lastChild</li>
+								<li>document.body.lastElementChild</li>
+								<li>document.body.firstChild.nextSibling</li>
+								<li>document.body.firstChild.nextElementSibling</li>
+								<li>document.body.firstChild.previousSibling</li>
+								<li>document.body.firstChild.previousElementSibling</li>
+								<li>document.body.parentNode</li>
+								<li>document.body.parentElement</li>
+								</ul>
+								<br><br>
+								<h1>Event Handler</h1>
+								<p>1. onclick = ‘alert’-not applicable, freezes, prevention</p>
+								<p>2. p.addEventListener -elements that you are handed</p>
+								<p>3 Elements</p>
+								<ul>
+								<li>p.addEventListener (‘click’, f1)</li>
+								<li>p.removeEventListener (‘click, f1’)</li>
+								<li>p.onclick = ‘’</li>
+								</ul>
+								<br><br>
+								<h1>Standard Objects</h1>
+								<h3>Functions - abstraction for code blocks and all functions return any type of value</h3>
+								<ul>
+								<li>Functions accepts argument(any type)</li>
+								<li>Functions that can return any type of value</li>
+								<li>Functions can be recursive</li>
+								<li>Functions can be nested</li>
+								<li>Function arguments can have default values</li>
+								<li>Functions rest parameters</li>
+								</ul>
+								<br><br>
+								<h1>Array</h1>
+								<ul>
+								<li>Array Destructuring</li>
+								<li>Array indexes can be non-contiguous</li>
+								</ul>
+								<br><br>
+								<h1>Multicore Methods</h1>
+								<ul>
+								<li>.push - add 1 element </li>
+								<li>.shift – remove 1st element</li>
+								<li>.reverse – changes in place</li>
+								<li>.splice – remove elements I array then insert</li>
+								</ul>
+								<br><br>
+								<h1>Methods</h1>
+								<ul>
+								<li>Mutators – modify arrays</li>
+								<dt>Array.prototype.fill()</dt>
+								<dt>Array.prototype.pop()</dt>
+								<li>Accessor – does not modify arrays</li>
+								<dt>Array.prototype.concat()</dt>
+								<dt>Array.prototype.indexOf()</dt>
+								<dt>Array.prototype.join()</dt>
+								<li>Iterators – execute something for each elements in array</li>
+								<dt>Array.prototype.filter()</dt>
+								<dt>Array.prototype.map()</dt>
+								<dt>Array.prototype.every()</dt>
+								<dt>Array.prototype.reduce()</dt>
+								</ul>
+								<br><br>
+								<h1>Objects</h1>
+								<ul>
+								<li>Object constructor = new object [];</li>
+								<li>Literal syntax = new object({});</li>
+								<li>Literal syntax = new object(true); </li>
+								<li>Literal syntax = new object(10); </li>
+								<li>Literal syntax = new object(‘hi’); </li>
+								</ul>
+								<br><br>
+								</article>
                                 </div>
                                         
 							</div>
