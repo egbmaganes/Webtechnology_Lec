@@ -1064,7 +1064,7 @@ section .chptrdesc {
 .section p, li {
     text-align: justify;
     font-size: 4vh;
-    line-height: 5vh;
+    line-height: 6vh;
     color: black;
     
 }
@@ -1153,5 +1153,6 @@ Media queries
 .panes {
     height: 50%;
     width: auto;
-    padding: 10px;
+    padding-top: 3%;
 }
+
