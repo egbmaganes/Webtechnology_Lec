@@ -1,12 +1,12 @@
-========================================================================================================================================
+=====================
 Setting up the site:
-========================================================================================================================================
+=====================
 
 Access website locally:
 	1. Unzip the file that contains the entire course website.
 	2. Open the course website folder and double click on index.html to open the website.
 	
-========================================================================================================================================
+====================
 
 Through firebase:
 Important: Make sure to have an Internet Connection.
@@ -34,7 +34,7 @@ Important: Make sure to have an Internet Connection.
 		"What do you want to use as your public directoy?" Type "public" <enter>
 		"Configure as a single-page app (rewrite all urls to /index.html)?" Type "N" <enter>
 		"File public/index.html already exists. Overwrite?" Type "N" <enter>
-		"What Firebase project do you want to associate as default?" Choose the project that you created on firebase.google.com 		<enter>
+		"What Firebase project do you want to associate as default?" Choose the project that you created on firebase.google.com 				<enter>
 		
 		firebase deploy <enter>
 

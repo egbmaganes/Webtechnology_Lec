@@ -1048,9 +1048,56 @@ a.socialIcon:hover, .socialHoverClass {
 .btn-cta.btn-lg {
 	border-bottom: 4px solid;
 }
+#introduction {
+    font-size: 3vh;
+    line-height: 5vh;
+}
 
+.propalignment {
+    text-align: justify;
+    text-indent:8vh;
+}
 
+section .chptrdesc {
+    color: white !important;
+}
+.section p, li {
+    text-align: justify;
+    font-size: 4vh;
+    line-height: 5vh;
+    color: black;
+    
+}
 
+#copyright {
+    text-align:center;
+    color: white;
+}
+#quote{
+    float: left;
+    width: 70%;
+    margin-right: 5%;
+}
+
+#quote h2, h5{
+    font-size: 4vh !important;
+    line-height: 8vh;
+    text-align: justify;
+    color: white;
+}
+
+#timberner {
+    float: left;
+}
+
+#quoted {
+    float: right;
+}
+
+.motivation {
+    background-color: black;
+    height: 2.3%;
+}
 /* ========================================
 Media queries
 ========================================= */
