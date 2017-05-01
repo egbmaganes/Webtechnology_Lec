@@ -1,0 +1,166 @@
+HTML
+1. It is used to create documents (i.e. web pages) in the World Wide Web.
+A. HTML
+B. CSS
+C. Javascript
+D. Jquery
+
+2. What does HTML stand for?
+A. Hyper Text Markup Language
+B. Hyper Transfer Markup Language
+C. Hyper Technical Markup Language
+D. Hyper Trends Markup Language
+
+3. Who invented HTML?
+A. Håkon Wium Lie
+B. Tim-Berners Lee
+C. Robert Kahn
+D. Vinton Cerf
+
+4. Which documents specify the HTML standards?
+A. W3C Standard
+B. W3C Recommendation
+C. WC Standard
+D.WC Recommendation
+
+5. What is the working draft version of HTML? 
+A. HTML 5.2
+B. HTML 5.3
+C. HTML 5.4
+D. HTML 5.5
+
+6. What are the roles of HTML in Modern Web Development? (choose the one that does not belong)
+A. structure (and content)
+B. behavioral
+C. social
+D. presentation/aesthetics
+
+7. What character is used to indicate an end tag?
+A. <
+B. -
+C. /
+D.  =
+
+8. What are the range of heading tags available using HTML?
+A. <h1> to <h3>
+B. <h1> to <h6>
+C. <h1> to <h8>
+D. <h1> to <h7>
+
+9. If you want to start a new line in a certain place within a paragraph, you need to use which tag?
+A. <P>
+B. <pr>
+C. <b>
+D. <br>
+
+10. What tag introduces a list item?
+A. <ol>
+B. <list>
+C. <lst>
+D. <li>
+
+CSS
+1. What language is used to specify the presentation aspects (i.e. layout and formatting of structurally marked up (e.g. HTML, XML, XHTML, SVG, etc.) document?
+A. HTML
+B. CSS
+C. Javascript
+D. Jquery
+
+2. What does CSS stand for?
+A. Cascading Style Sheet
+B. Computing Style Sheet
+C. Coding Style Sheet
+D. Coloring Style Sheet
+
+3. Who invented CSS?
+A. Håkon Wium Lie
+B. Tim-Berners Lee
+C. Robert Kahn
+D. Vinton Cerf
+
+4. What is the CSS Statements At-Rules that is used to specify the character set?
+A. @charset
+B. @font
+C. @keyset
+D. @page
+
+5. What is the CSS selector that matches everything?
+A. Universal  Selector
+B. Attribute Selector
+C. Class Selector
+D. ID Selector
+
+6. What are the CSS Processors and Frameworks? (choose the one that does not belong)
+A. Sass
+B. Materialize
+C. Boot Strap
+D. Laravel
+
+7. What are the type selectors of CSS? (choose the one that does not belong)
+A. div
+B. ul
+C. lo
+D. p
+
+8. What are the Structural Pseudo-class of CSS? (choose the one that does not belong)
+A. :first-chid
+B. :last-child
+C. :only-child
+D. :middle-child
+
+9. What are the CSS combinators? (choose the one that does not belong)
+A. Descendant Combinators
+B. Sibling Combinators
+C. Child Combinators
+D. Ascendant Combinators
+
+10. What are the CSS Rule Precedence? (choose the one that does not belong)
+A. By Order
+B. Specifity
+C. By origin and importance
+D. Generality
+
+Javascript
+1. It is a language commonly used to create interactive effects within web browsers.
+A. HTML
+B. CSS
+C. Javascript
+D. Jquery
+
+2. Who invented HTML?
+A. Håkon Wium Lie
+B. Tim-Berners Lee
+C. Brendan Eich
+D. Vinton Cerf
+
+3. Javascript is the standardized by ECMA International as ________?
+A. ECMAScript
+B. EMMAScript
+C. ECNAScript
+D. ENNAScript
+
+4. Javascript is formerly called as ________?
+A. Mocha
+B. Choco
+C. Caramel
+D. Matcha
+
+5. It is an event handler that executes a JavaScript when a button is clicked
+A. onclick
+B. onMouseover
+C. onUnload
+D. onMouseout
+
+True/False
+6. Function arguments can have default values.
+7. Functions rest parameters.
+8. Functions cannot be nested.
+9. Functions cannot be recursive.
+10. Functions that can return any type of value.
+
+
+
+
+
+
+
