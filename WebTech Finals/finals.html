@@ -57,9 +57,9 @@
         </div>    
 		</section>
         
-          <!-- Midterms -->
+          <!-- Finals -->
         <!-- section works -->
-		<section id="section-midterms" class="section appear clearfix">
+		<section id="section-finals" class="section appear clearfix">
 			<div class="container">
 				
 				<div class="row mar-bot40">
@@ -85,28 +85,144 @@
                                 <article class="col-md-4 isotopeItem servlets">
                                     <div class="panes">
                                     <h1>Servlets</h1>
-                                        <p>A Java servlet is a Java program that extends the capabilities of a server. Although servlets can respond to any types of requests, they most commonly implement applications hosted on Web servers. Such Web servlets are the Java counterpart to other dynamic Web content technologies such as PHP and ASP.NET. -From Wikipedia</p>
+                                        <p>A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers. For such applications, Java Servlet technology defines HTTP-specific servlet classes. <h4><a href="http://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html"> -Source: Oracle</a></h4></p>
+                                    
+                                    
                                     </div>
+                                    
+                                    <div class="panes">
+                                        <h2>Features:</h2>
+                                        <ul>
+                                            <li>Better performance: Because it creates a thread for each request not process.</li>
+                                            <li>Portability: Because it uses java language and java is robust language.</li>
+                                            <li>Robust: Servlet are managed by JVM so no need to worry about memory leak, garbage collection.</li>
+                                            <li>Secure: Because it uses Java language and java is a secure language.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="panes">
+                                        <h2>Servlet API</h2>
+                                        <h3>Servlet API contains 2 Java packages which are <i>javax.servlet</i> and <i>javax.servlet.http.</i></h3>
+                                            <h3>javax.servlet Interfaces</h3>
+                                                <ul>
+                                                    <li>Servlet</li>
+                                                    <li>ServletRequest</li>
+                                                    <li>ServletResponse</li>
+                                                    <li>RequestDispatcher</li>
+                                                    <li>ServletConfig</li>
+                                                    <li>ServletContext</li>
+                                                    <li>SingleThreadModel</li>
+                                                    <li>Filter</li>
+                                                    <li>FilterConfig</li>
+                                                    <li>FilterChain</li>
+                                                    <li>ServletRequestListener</li>
+                                                    <li>ServletRequestAttributeListener</li>
+                                                    <li>ServletContextListener</li>
+                                                    <li>ServletContextAttributeListener</li>
+                                                </ul>
+                                            <br>
+                                            <h3>javax.servlet Classes</h3>
+                                                <ul>
+                                                    <li>GenericServlet</li>
+                                                    <li>ServletInputStream</li>
+                                                    <li>ServletOutputStream</li>
+                                                    <li>ServletRequestWrapper</li>
+                                                    <li>ServletResponseWrapper</li>
+                                                    <li>ServletRequestEvent</li>
+                                                    <li>ServletContextEvent</li>
+                                                    <li>ServletRequestAttributeEvent</li>
+                                                    <li>ServletContextAttributeEvent</li>
+                                                    <li>ServletException</li>
+                                                    <li>UnavailableException</li>
+                                                </ul>
+                                            
+                                            <br>
+                                            <h3>javax.servlet.http Interfaces</h3>
+                                                <ul>
+                                                    <li>HttpServletRequest</li>
+                                                    <li>HttpServletResponse</li>
+                                                    <li>HttpSession</li>
+                                                    <li>HttpSessionListener</li>
+                                                    <li>HttpSessionAttributeListener</li>
+                                                    <li>HttpSessionBindingListener</li>
+                                                    <li>HttpSessionActivationListener</li>
+                                                </ul>
+                                            
+                                            <br>
+                                            <h3>javax.servlet.http Classes</h3>
+                                                <ul>
+                                                    <li>HttpServlet</li>
+                                                    <li>Cookie</li>
+                                                    <li>HttpServletRequestWrapper</li>
+                                                    <li>HttpServletResponseWrapper</li>
+                                                    <li>HttpSessionEvent</li>
+                                                    <li>HttpSessionBindingEvent</li>
+                                                </ul>
+                                            <h4><a href=">http://www.sitesbay.com/servlet/index"> -Source: Sitesbay</a></h4>
+                                    </div>
+                                  
+                                    <div class="panes">
+                                        <h2>Servlet Sample Code</h2>
+                                        <p>To deploy and run a servlet, a web container must be used. A web container (also known as a servlet container) is essentially the component of a web server that interacts with the servlets. The web container is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that the URL requester has the correct access rights.</p>
+                                        <code>
+                                        package testPackage; // Always use packages.<br>
+                                            import java.io.*;<br>
+                                            import javax.servlet.*;<br>
+                                            import javax.servlet.annotation.*;<br>
+                                            import javax.servlet.http.*;<br>
+
+                                            @WebServlet("/hello")<br>
+                                            public class HelloWorld extends HttpServlet<br>
+                                            {<br>
+                                                @Override<br>
+                                                public void doGet(HttpServletRequest request,<br>
+                                                   HttpServletResponse response) <br>
+                                                    throws ServletException, IOException<br>
+                                                {<br>
+                                                    PrintWriter out = response.getWriter();<br>
+                                                    out.println("Hello World!");<br>
+                                                }<br>
+                                            }<br>
+                                        </code>
+                                        
+                                        <br>
+                                        
+                                        <h2>Web Container</h2>
+                                        <h3>What is it?</h3>
+                                        <p>Web container is the component of a web server that interacts with Java servlets. It is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that the URL requester has the correct access-rights. A web container implements the web component contract of the Java EE architecture, specifying a runtime environment for web components that includes security, concurrency, lifecycle management, transaction, deployment, and other services.</p>
+                                        
+                                        <h3>Some open-source Web Containers to use: </h3>
+                                            <ul>
+                                                <li>Apache Tomcat</li>
+                                                <li>GlassFish</li>
+                                                <li>Jetty</li>
+                                                <li>JBoss EAP</li>
+                                                <li>JOnAS</li>
+                                                <li>Resin</li>
+                                                <li>Blazix</li>
+                                                <li>Wildfly</li>
+                                            </ul>
+                                    </div>                                
                                 </article>
                                   
                                   <article class="col-md-4 isotopeItem jsp">
                                     <div class="panes">
                                     <h1>JSP</h1>
-                                        <p>JavaServer Pages (JSP) is a technology that helps software developers create dynamically generated web pages based on HTML, XML, or other document types. Released in 1999 by Sun Microsystems. JSP is similar to PHP, ASP and React's JSX, but it uses the Java programming language. To deploy and run JavaServer Pages, a compatible web server with a servlet container such as Apache Tomcat or GlassFish is required. -From Wikipedia</p>
+                                        <p>JavaServer Pages (JSP) is a technology that helps software developers create dynamically generated web pages based on HTML, XML, or other document types. Released in 1999 by Sun Microsystems. JSP is similar to PHP, ASP and React's JSX, but it uses the Java programming language. To deploy and run JavaServer Pages, a compatible web server with a servlet container such as Apache Tomcat or GlassFish is required. <a href="https://en.wikipedia.org/wiki/JavaServer_Pages"> -From Wikipedia</a></p>
                                     </div>
                                 </article>
                                   
                                   <article class="col-md-4 isotopeItem php">
                                     <div class="panes">
                                     <h1>PHP</h1>
-                                        <p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. -From php.net</p>
+                                        <p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. <a href="http://php.net/manual/en/intro-whatis.php">-From php.net</a></p>
                                     </div>
                                 </article>
                                   
-                                  <article class="col-md-4 isotopeItem Node.js">
+                                  <article class="col-md-4 isotopeItem nodejs">
                                     <div class="panes">
                                     <h1>Node.js</h1>
-                                        <p>Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side. Historically, JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage's HTML, to be run client-side by a JavaScript engine in the user's web browser. Node.js enables JavaScript to be used for server-side scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. -From Wikipedia</p>
+                                        <p>Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side. Historically, JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are embedded in a webpage's HTML, to be run client-side by a JavaScript engine in the user's web browser. Node.js enables JavaScript to be used for server-side scripting, and runs scripts server-side to produce dynamic web page content before the page is sent to the user's web browser. <a href="https://en.wikipedia.org/wiki/Node.js"> -From Wikipedia</a></p>
                                     </div>
                                 </article>
                                 </div>
@@ -120,7 +236,7 @@
 	<section id="footer" class="section footer">
 		<div class="container">
 			<div class="row align-center copyright">
-					<div class="col-sm-12"><p id=copyright>Copyright &copy; Amoeba</p>
+					<div class="col-sm-12"><p id="copyright">Copyright &copy; Amoeba</p>
                         <div class="credits">
                             <a href="https://bootstrapmade.com/">Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>
