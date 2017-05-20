@@ -36,7 +36,7 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
 						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#section-about">About</a></li>
+						<li><a href="index.html#section-about">About</a></li>
 						<li><a href="prelims.html">Prelims</a></li>
                         <li><a href="midterms.html">Midterms</a></li>
 						<li><a href="finals.html">Finals</a></li>
@@ -45,7 +45,7 @@
 			</div>
 		</div>
         
-		<section id="parallax2" class="section parallax" data-stellar-background-ratio="0.5">	
+		<section id="parallax2" class="section parallax" data-stellar-background-ratio="0.8">	
         <div class="container">    
             <div class="align-center pad-top40 pad-bot40">
                 <blockquote class="bigquote color-white">Midterms</blockquote>
@@ -208,26 +208,50 @@
                                             <li>@page – formatting the page for printing</li>
                                         </ul>
                                     <div class="panes">
-                                        <h1>Selector Syntax</h1>
+                                        <h1>SELECTORS</h1>
+                                        <p>Selectors are used to find certain parts of the html which can then be used for the CSS Rule.</p>
+                                        
+                                        <h2>CSS Basic Selector</h2>
                                         <p>1 or more sequences of simple selectors separated by combinators with 1 pseudo-element possibly appended to the last sequence</p>
-                                        <h1>Type Selector (div, p ,ul, hl, body)</h1>
                                         <ul>
-                                            <li>Simple Selector</li>
-                                            <li>Universal selector (*) – matches everything</li>
-                                            <li>Attribute selector</li>
-                                            <li>Class selector</li>
-                                            <li>ID selector</li>
-                                            <li>Dynamic</li>
-                                            <li>Target</li>
-                                            <li>Language</li>
-                                            <li>UI Element States</li>
+                                            <li>Universal Selector - allows you to select and style any element type.</li>
+                                            <h3>Example: *{color:white}</h3>
+                                            <li>Element Selector - allows you to select and style a HTML element.</li>
+                                            <h3>Example: div{color:white}</h3>
+                                            <li>Id Selector - allows you to select and style the element with the specified id.</li>
+                                            <h3>Example: #Some_ID{color:white}</h3>
+                                            <li>Class Selector - allows you to select and style the elements with the specified class.</li>
+                                            <h3>Example: .Some_Class{color:white}</h3>
+                                            <li>Element specified selector - allows you to select and style only the elements associated with a specified class/id.</li>
+                                            <h3>Example: div.Some_Class{color:white}</h3>
                                         </ul>
-                                        <h1>Pseudo-Classes</h1>
+                                        <h2>Relational Selectors</h2>
                                         <ul>
-                                            <li>Target Pseudo-class</li>
-                                            <ul>
-                                                <li>:target</li>
-                                            </ul>
+                                            <li>Descendent selector - allows you to select and style all elements that are descendants of a specified element.</li>
+                                            <h3>Example: div h3{color:white}</h3>
+                                            <li>Child selector - allows you to select and style all elements that are direct descendants.</li>
+                                            <h3>Example: div>h2{color:white}</h3>
+                                            <li>Adjacent sibling selector - allows you to select and style the elements that is an immediate/ adjacent sibling.</li>
+                                            <h3>Example: p+span{color:white}</h3>
+                                            <li>General sibling selector - allows you to select and style the elements that are siblings no matter the arrangement.</li>
+                                            <h3>Example: h1~h3{color:white}</h3>
+                                        </ul>
+                                        <h2>Attribute Selectors</h2>
+                                        <ul>
+                                            <li>Attribute Selector - allows you to select and style an element with a specified attribute or attribute value</li>
+                                            <h3>Example: input[type="text"]{color:white}</h3>
+                                        </ul>
+                                        
+                                        <h2>Pseudo-Classes</h2>
+                                        <ul>
+                                            <li>Pseudo-class selector - allows you to select and style an element with a special state specified by a keyword</li>
+                                            <h3>Example: a:hover{color:white}</h3>
+                                            <li>nth-child selector - allows you to select and style an element that has an+b-1 siblings before it in the doc tree and has a parent element</li>
+                                            <h3>Example: a:nth-child(4n){color:white}</h3>
+                                        </ul>
+                                        
+                                        <h2>Lists of Pseudo-Classes</h2>
+                                        <ul>
                                             <li>Language Pseudo-class</li>
                                             <ul>
                                                 <li>:lang()</li>
@@ -242,36 +266,33 @@
                                             <li>Structural Pseudo-class</li>
                                             <ul>
                                                 <li>:root</li>
-                                                <li>::first-chid</li>
-                                                <li>::last-child</li>
-                                                <li>::only-child</li>
-                                                <li>::nth-child("any arithmetic values or "even"/"odd")</li>
-                                                <li>::nth-last-child()</li>
-                                                <li>::first-of-type</li>
-                                                <li>::last-of-type</li>
-                                                <li>::only-of-type</li>
-                                                <li>::nth-of-type()</li>
-                                                <li>::nth-last-of-type()</li>
+                                                <li>:first-chid</li>
+                                                <li>:last-child</li>
+                                                <li>:only-child</li>
+                                                <li>:nth-child("any arithmetic values or "even"/"odd")</li>
+                                                <li>:nth-last-child()</li>
+                                                <li>:first-of-type</li>
+                                                <li>:last-of-type</li>
+                                                <li>:only-of-type</li>
+                                                <li>:nth-of-type()</li>
+                                                <li>:nth-last-of-type()</li>
                                             </ul>
                                             <li>Negation Pseudo-class</li>
                                             <ul>
                                                 <li>:not()</li>
                                             </ul>
-                                            
+                                            <li>Pseudo-Elements</li>
+                                            <ul>
+                                                <li>::first-letter</li>
+                                                <li>::first-line</li>
+                                                <li>::before</li>
+                                                <li>::after</li>
+                                            </ul>
                                         </ul>
-                                        <h1>Combinators</h1>
-                                        <ul>
-                                            <li>Descendant combinators (whitespace, i, e, space, tab, line feed, carriage return, form feed)</li>
-                                            <li>Child combinators (&gt;) – direct descendant</li>
-                                            <li>Sibling combinators</li>
-                                        </ul>
-                                        <h1>Pseudo-Elements</h1>
-                                        <ul>
-                                            <li>:first-letter</li>
-                                            <li>:first-line</li>
-                                            <li>:before</li>
-                                            <li>:after</li>
-                                        </ul>
+                                        <br>
+                                        <h3>NOTE: Make sure to try out the different selectors in your editors to clearly understand how they function.</h3>
+                                        <br>    
+                                        <br>    
                                         <h1>Rule Precedence</h1>
                                         <p>1. By origin and importance</p>
                                         <ul>
@@ -408,7 +429,7 @@
                                         <li>p.addEventListener (‘click’, f1)</li>
                                         <li>p.removeEventListener (‘click, f1’)</li>
                                         <li>p.onclick = ‘’</li>
-                                    </ul>
+                                        </ul>
                                     </div>
                                     
                                     
@@ -454,18 +475,25 @@
                                                 <li>Array.prototype.reduce()</li>
                                             </ul>
                                         </ul>
-                                        <h3>Objects - a collection of properties associated by key-value pairs.</h3>
-                                        <h3>Different ways to instantiate an object</h3>
+                                        <h3>NOTE: Basing on from experience, you will most likely utilize ARRAYS and FUNCTIONS throughout any web development. They are very flexible and can be a simple/ straight solution for most problems. On some cases, objects are even inserted in an array.</h3>
+                                        <br>
+                                        <br>
+
+                                        <h1>Other JavaScript Core Objects</h1>
                                         <ul>
-                                            <li>Object constructor = new object [];</li>
-                                            <li>Literal syntax = new object({});</li>
-                                            <li>Literal syntax = new object(true); </li>
-                                            <li>Literal syntax = new object(10); </li>
-                                            <li>Literal syntax = new object(‘hi’); </li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a></li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></li>
+                                                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></li>
+                                                <li>Check out the others <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">here</a>.</li>
                                         </ul>
-                                    </div>
+                                    
                                     <br>
-                                    <h3>To learn more about JavaScript go to this website: <a href="https://www.w3schools.com/js/default.asp">JavaScript</a> </h3>
+                                    <h3>To learn more about JavaScript go to these website: <a href="https://www.w3schools.com/js/default.asp">JavaScript</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Document Object Model</a></h3>
 								</article>
                                 </div>
 							</div>
@@ -481,6 +509,7 @@
 		<div class="container">
 			<div class="row align-center copyright">
 					<div class="col-sm-12"><p id=copyright>Copyright &copy; Amoeba</p>
+                        <p id=copyright>Contents by Saint Louis University</p>
                         <div class="credits">
                             <a href="https://bootstrapmade.com/">Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>

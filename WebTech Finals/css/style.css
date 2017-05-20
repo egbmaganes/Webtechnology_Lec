@@ -1088,6 +1088,7 @@ section .chptrdesc {
 
 #timbernerimg {
     float: left;
+    margin-bottom: 10%;
 }
 
 #quoted {
@@ -1096,7 +1097,7 @@ section .chptrdesc {
 
 .motivation {
     background-color: black;
-    height: 1.2% !important;
+    height: 10% !important;
 }
 
 /* ========================================
