@@ -36,7 +36,7 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
 						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#section-about">About</a></li>
+						<li><a href="index.html#section-about">About</a></li>
 						<li><a href="prelims.html">Prelims</a></li>
                         <li><a href="midterms.html">Midterms</a></li>
 						<li><a href="finals.html">Finals</a></li>
@@ -51,13 +51,13 @@
             <div class="align-center pad-top40 pad-bot40">
                 <blockquote class="bigquote color-white">Finals</blockquote>
 				<p class="color-white propalignment chptrdesc">
-                    Churva churva here
+                    This section covers concepts about Server-side scripting. It talks about some available programming languages which you can use for you web server. This chapter mostly focuses on the concept of dynamic page content which you can use for you web application. Alongside everything that were stated, we are also going to talk about Web Application Security which involves learning what they are.
                 </p>
             </div>
         </div>    
 		</section>
         
-          <!-- Midterms -->
+        <!-- Finals -->
         <!-- section works -->
 		<section id="section-midterms" class="section appear clearfix">
 			<div class="container">
@@ -74,6 +74,7 @@
                      <div class="row">
                           <nav id="filter" class="col-md-12 text-center">
                               <a href="#" class="current btn-theme btn-small" data-filter="*">All</a>
+                              <a href="#" class="btn-theme btn-small" data-filter=".sss">SSS</a>
                               <a href="#" class="btn-theme btn-small" data-filter=".servlets">Servlets</a>
                               <a href="#" class="btn-theme btn-small" data-filter=".jsp">JSP</a>
                               <a href="#" class="btn-theme btn-small" data-filter=".php">PHP</a>
@@ -85,7 +86,18 @@
                             <div class="row">
                               <div class="portfolio-items isotopeWrapper clearfix">
                                   
-                                <article class="col-md-4 isotopeItem servlets">
+                                
+                                  <article class="col-md-4 isotopeItem sss">
+                                    <div class="panes">
+                                    <h1>Server-Side Scripting</h1>
+                                        <p>It is a technique used in web development which involves employing scripts on a web server which produce a response customized for each user's (client's) request to the website. The alternative is for the web server itself to deliver a static web page. Scripts can be written in any of a number of server-side scripting languages that are available (see below). Server-side scripting is distinguished from client-side scripting where embedded scripts, such as JavaScript, are run client-side in a web browser, but both techniques are often used together.</p>
+                                        <h4><a href="https://en.wikipedia.org/wiki/Server-side_scripting"> -Source: Wikipedia</a></h4>
+					               </div>
+                                </article>
+                                  
+                                  
+                                  
+                                  <article class="col-md-4 isotopeItem servlets">
                                     <div class="panes">
                                     <h1>Servlets</h1>
                                         <p>A servlet is a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model. Although servlets can respond to any type of request, they are commonly used to extend the applications hosted by web servers. For such applications, Java Servlet technology defines HTTP-specific servlet classes. <h4><a href="http://docs.oracle.com/javaee/5/tutorial/doc/bnafe.html"> -Source: Oracle</a></h4></p>
@@ -317,7 +329,8 @@
                                     <h3>PHP is commonly used in:</h3>
                                         <p>Server-side Scripting: Server-side scripting is the target field for PHP. PHP parser, web server, and a web browser are the three things to make it work. The users need to run the web server as long as it has a PHP that is already installed.
                                         Command line Scripting: Running php does not require to use any server or browser. The only thing to use PHP without a browser and a server is the PHP Parser. It is a type of usage that is ideal for scripts.
-                                        </p> 
+                                        </p>
+                                        <h3>Additional notes: <a href="http://php.net/manual/en/language.variables.superglobals.php">PHP Superglobals</a></h3>
 					  </div>
                                 </article>
                                   
@@ -381,12 +394,14 @@
                                             <li>A10-Underprotected APIs</li>
                                             <p>Modern applications often involve rich client applications and APIs, such as JavaScript in the browser and mobile apps, that connect to an API of some kind (SOAP/XML, REST/JSON, RPC, GWT, etc.). These APIs are often unprotected and contain numerous vulnerabilities.</p>
                                         </ul>
+                                         <a href="https://www.owasp.org/index.php/Top_10_2017-Top_10"> -From OWASP</a>
                                     </div>
                                 </article>
                                   
                                 </div>
                             </div>
                         </div>
+                <h3>NOTE: Always take note on the usage of post/get, sessions, cookies, and CRUD functionality with your application. CRUD simply means "Create, Retrieve, Update, Delete". Whatever language you choose for your web server, the context mentioned above is what you are most likely to utilize. Additional notes for PHP and NodeJS</h3>
                     </div>
         </section>
                                 
@@ -395,6 +410,7 @@
 		<div class="container">
 			<div class="row align-center copyright">
 					<div class="col-sm-12"><p id=copyright>Copyright &copy; Amoeba</p>
+                        <p id=copyright>Contents by Saint Louis University</p>
                         <div class="credits">
                             <a href="https://bootstrapmade.com/">Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>
